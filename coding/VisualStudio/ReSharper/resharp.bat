@@ -1,0 +1,1 @@
+D:\resharper.exe /VsVersion=14.0;15.0 /SpecificProductNames=dotCover;dotTrace;dotMemory;ReSharper;dotPeek;teamCityAddin;ReSharperCpp /Silent=True /PerMachine=True 

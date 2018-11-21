@@ -1,0 +1,334 @@
+<html><!-- #BeginTemplate "/Templates/template.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Sysinternals Freeware - Utilities for Windows NT and Windows 2000 - DebugView</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html;">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</script>
+<link rel=stylesheet href="../../includes/default.css" type="text/css">
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff" background="../../images/background.gif"   onLoad="MM_preloadImages('../../images/topmenu_images/otop_menu_resources.gif','../../images/topmenu_images/otop_menu_aboutus.gif','../../images/topmenu_images/otop_menu_global.gif','../../images/sidemenu_images/oside_menu_98_utilities.gif','../../images/sidemenu_images/oside_menu_utilities.gif','../../images/sidemenu_images/oside_menu_source.gif','../../images/sidemenu_images/oside_menu_information.gif','../../images/sidemenu_images/oside_menu_98_source.gif','../../images/sidemenu_images/oside_menu_98_information.gif','../../images/topmenu_images/otop_menu_resources.gif','../../images/topmenu_images/otop_menu_sitemap.gif','../../images/topmenu_images/otop_menu_licensing.gif','../../images/topmenu_images/otop_menu_aboutus.gif','../../images/topmenu_images/otop_menu_global.gif')">
+<table width="770" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td rowspan="4" width="226" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><a href="../../index.shtml"><img src="../../images/logo.gif" width="227" height="67" border="0"></a></td>
+        </tr>
+        <tr valign="top"> 
+          <td height="479"><SCRIPT LANGUAGE="JavaScript1.2" TYPE="text/javascript">
+<!--
+	JM_DOM = (document.getElementById) ? true : false;
+	JM_NS4 = (document.layers) ? true : false;
+	JM_NS4old = (JM_NS4 && (parseFloat(navigator.appVersion) < 4.02));
+	JM_IE = (document.all) ? true : false;
+	JM_IE4 = JM_IE && !JM_DOM;
+	JM_IE4M = JM_IE4 && JM_Mac;
+	JM_IsMenu = (JM_DOM || (JM_NS4 && !JM_NS4old) || (JM_IE && !JM_IE4M));
+
+	
+	if ((JM_NS4 || JM_DOM) && !JM_IE) {
+		searchWidth = 7;
+		emailWidth= 12;
+		vgmWidth = 7;
+	} else {
+		searchWidth = 14;
+		emailWidth= 14;
+		vgmWidth = 11;
+	}
+//-->
+</SCRIPT>
+<table width="176" border="0" cellspacing="0" cellpadding="0" height="279">
+  <tr valign="top"> 
+    <td height="291"><img src="../../images/sidemenu_images/side_menu_top.gif" width="179" height="92" align="top"><br>
+      <a href="../../ntw2k/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image16','','../../images/sidemenu_images/oside_menu_utilities.gif',1)"><img name="Image16" border="0" src="../../images/sidemenu_images/side_menu_utilities.gif" width="179" height="23" align="top"></a> 
+      <a href="../../ntw2k/source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','../../images/sidemenu_images/oside_menu_source.gif',1)"><img name="Image11" border="0" src="../../images/sidemenu_images/side_menu_source.gif" width="179" height="22" align="top"></a> 
+      <a href="../../ntw2k/information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','../../images/sidemenu_images/oside_menu_information.gif',1)"><img name="Image12" border="0" src="../../images/sidemenu_images/side_menu_information.gif" width="179" height="27" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_middle.gif" width="179" height="50" align="top"><br>
+      <a href="../../win9x/98utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image13" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> 
+      <a href="../../win9x/98source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','../../images/sidemenu_images/oside_menu_98_source.gif',1)"><img name="Image14" border="0" src="../../images/sidemenu_images/side_menu_98_source.gif" width="179" height="26" align="top"></a> 
+      <a href="../../win9x/98information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','../../images/sidemenu_images/oside_menu_98_information.gif',1)"><img name="Image15" border="0" src="../../images/sidemenu_images/side_menu_98_information.gif" width="179" height="24" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_linux.gif" width="179" height="50" border="0" align="top"><br>
+      <a href="../../linux/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image131','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image131" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> <br><br>
+    </td>
+  <tr>
+    <td valign="bottom"> 
+      <form method="get" action="http://search.atomz.com/search/">
+        <img src="../../images/sidemenu_images/side_menu_search.gif" width="179" height="25" border="0" align="top"> 
+        <img src="/images/spacer.gif" width="10" height="5"> 
+        <script language="JavaScript">document.write("<input type='text' size=" + searchWidth + " name='sp-q'>")</script>
+        &nbsp;
+        <input type="image" border="0" name="Sign Up!2" src="../../images/sidemenu_images/go.gif" width="35" height="20" alt="Sign Up!" class="floatright"  align="absmiddle">
+        <input type=hidden name="sp-a" value="sp1000b352">
+      </form>
+    </td>
+ </tr> 
+</table>
+
+ </td>
+        </tr>
+      </table>
+    </td>
+    <td colspan="2" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><img src="../../images/top_arch.gif" width="581" height="48" align="bottom"></td>
+        </tr>
+        <tr valign="top"> 
+          <td valign="top"><table width="581" border="0" cellspacing="0" cellpadding="0" height="48">
+  <tr valign="top"> 
+    <td><a href="../../othresources.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','../../images/topmenu_images/otop_menu_resources.gif',1)"><img name="Image7" border="0" src="../../images/topmenu_images/top_menu_resources.gif" width="115" height="45" align="top"></a><a href="../../sitemap.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','../../images/topmenu_images/otop_menu_sitemap.gif',1)"><img name="Image8" border="0" src="../../images/topmenu_images/top_menu_sitemap.gif" width="91" height="45" align="top"></a><a href="../../licensing.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','../../images/topmenu_images/otop_menu_licensing.gif',1)"><img name="Image9" border="0" src="../../images/topmenu_images/top_menu_licensing.gif" width="75" height="45" align="top"></a><a href="../../aboutus.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','../../images/topmenu_images/otop_menu_aboutus.gif',1)"><img src="../../images/topmenu_images/filler.gif" width="6" height="45" align="top" border="0"><img name="Image6" border="0" src="../../images/topmenu_images/top_menu_aboutus.gif" width="75" height="45" align="top"></a><a href="../../index.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image192','','../../images/topmenu_images/otop_menu_home.gif',1)"><img name="Image192" border="0" src="../../images/topmenu_images/top_menu_home.gif" width="61" height="45" align="top"></a><img src="../../images/topmenu_images/top_menu_filler.gif" width="37" height="45" align="top"><img src="../../images/topmenu_images/top_menu_end.gif" width="121" height="45" align="top"></td>
+  </tr>
+</table>
+<!-- #BeginEditable "Section%20title/logo" --><i><b><font size="24" color="#0000BF" face="Arial"><img
+src="../../images/logos/debugview.gif" alt="Logo" width="180" height="30"></font></b></i><a name='top'></a><br>
+            <b>Copyright &copy; 1998-2002&nbsp;<a href="mailto:mark@sysinternals.com">Mark 
+            Russinovich</a></b><!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top"> 
+      <table width="570" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top"> 
+          <td colspan="3" height="429"><!-- #BeginEditable "Body" -->
+            <TABLE CELLSPACING="10" CELLPADDING="0" WIDTH="408">
+              <TR valign="top" align="left"> 
+                <TD COLSPAN="2" width="651"> 
+                  <table width="580" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td valign="top"> 
+                        <table width="549" border="0" cellspacing="0" cellpadding="0" dwcopytype="CopyTableRow">
+                          <tr> 
+                            <td colspan="2"><b></b></td>
+                          </tr>
+                          <tr valign="top"> 
+                            <td colspan="2"><span class='include'>Last Updated 
+                              September 3, 2002 v4.2</span> 
+                              <hr>
+                            </td>
+                          </tr>
+                          <tr valign="middle"> 
+                            <td colspan="2" height="40"><span class='sectionheader'>Introduction</span> 
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="2" align="left"><i>DebugView</i> 
+                              is an application that lets you monitor debug output 
+                              on your local system, or any computer on the network 
+                              that you can reach via TCP/IP. It is capable of 
+                              displaying both kernel-mode and Win32 debug output, 
+                              so you don&#146;t need a debugger to catch the debug 
+                              output your applications or device drivers generate, 
+                              nor do you need to modify your applications or drivers 
+                              to use non-standard debug output APIs.<br>
+                              <br>
+                              <i>DebugView</i> works on Windows 95, 98, Me, NT 
+                              4, 2000, XP and .NET Server.</td>
+                          </tr>
+                          <tr valign="middle"> 
+                            <td colspan="2" height="40"><span class='sectionheader'>DebugView 
+                              Capture </span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="2">Under Windows 95, 98, 
+                              and Me <i>DebugView</i> will capture output from 
+                              the following sources: 
+                              <ul>
+                                <li>Win32 <b>OutputDebugString</b></li>
+                                <li> Win16 <b>OutputDebugString</b></li>
+                                <li>Kernel-mode <b>Out_Debug_String</b> 
+                                <li>Kernel-mode <b>_Debug_Printf_Service </b>
+                              </ul>
+                              Under Windows NT, 2000, XP and .NET Server <i>DebugView</i> 
+                              will capture: 
+                              <ul>
+                                <li>Win32 <b>OutputDebugString</b> </li>
+                                <li>Kernel-mode <b>DbgPrint</b> </li>
+                                <li>All kernel-mode variants of <b>DbgPrint </b>implemented 
+                                  in Windows XP and .NET Server</li>
+                              </ul>
+                              <p><i>DebugView</i> also extracts kernel-mode debug 
+                                output generated before a crash from Window NT/2000/XP 
+                                crash dump files if <i>DebugView</i> was capturing 
+                                at the time of the crash.</p>
+                            </td>
+                          </tr>
+                          <tr valign="middle"> 
+                            <td height="40" colspan="2"><span class='sectionheader'>DebugView 
+                              Capabilites</span> </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="2" valign="TOP"> 
+                              <p><b></b><i>DebugView</i> has a powerful array 
+                                of features for controlling and managing debug 
+                                output. </p>
+                              <p>Features new to version 4.2:</p>
+                              <ul>
+                                <li><b>Kernel-hook bug fixed</b>: <i>DebugView</i> 
+                                  sometimes mistakenly report that it couldn't 
+                                  hook kernel-mode debug output on Windows XP 
+                                  and .NET Server.</li>
+                                <li><b>Client global-capture option:</b> A new 
+                                  option allows the client to capture console 
+                                  Win32 debug output on Terminal Server systems 
+                                  when run from a non-console session.</li>
+                                <li><b>Filtering improved:</b> Filters can be 
+                                  much longer and now apply to Win32 process IDs 
+                                  when process IDs are included in the output.</li>
+                                <li><b>Crash-dump support improved:</b> Several 
+                                  bugs related to extracting kernel-mode output 
+                                  from crash dumps are fixed and <i>DebugView</i> 
+                                  now loads resulting log files.</li>
+                                <li><b>More highlight filters: </b><i>DebugView</i> 
+                                  now has 10 highlight filters, up from 5.</li>
+                                <li><b>Insert comments: </b>A new menu item lets 
+                                  you insert comments into output.</li>
+                                <li><b>New switches:</b> New command-line switches 
+                                  allow you to specify history depth and load 
+                                  log files.</li>
+                                <li><b>Better balloon tips</b>: If an output line 
+                                  is wider than the screen its mouse hover balloon 
+                                  tip word wraps.</li>
+                              </ul>
+                              <p>Features new to version 4.1:</p>
+                              <ul>
+                                <li><b>Save and load filters:</b> You can save 
+                                  and load filters, including the highlighting 
+                                  colors.</li>
+                                <li><b>Load saved logs</b>: You can now load a 
+                                  log file back into the <i>DebugView</i> output 
+                                  window.</li>
+                                <li><b>Capture boot-time kernel-mode debug output:</b> 
+                                  Under Windows NT/2K, you can use DebugView to 
+                                  capture debug output generated by drivers from 
+                                  the earliest point in the boot process.</li>
+                              </ul>
+                              <p>Here is a list highlighting some of <i>DebugView's</i> 
+                                other features: </p>
+                              <ul>
+                                <li><b>Remote monitoring:</b> Capture kernel-mode 
+                                  and/or Win32 debug output from any computer 
+                                  accessible via TCP/IP - even across the Internet. 
+                                  You can monitor multiple remote computers simultaneously. 
+                                  <i>DebugView</i> will even install its client 
+                                  software itself if you are running it on a Windows 
+                                  NT/2K system and are capturing from another 
+                                  Windows NT/2K system in the same Network Neighborhood.</li>
+                                <li><b>Most-recent-filter lists:</b> <i>DebugView</i> 
+                                  remembers your most recent filter selections, 
+                                  with an interface that makes it easy to reselect 
+                                  them.</li>
+                                <li><b>Process ID option:</b> Toggle the display 
+                                  of process IDs for Win32 debug output.</li>
+                                <li><b>Clipboard copy:</b> Select multiple lines 
+                                  in the output window and copy their contents 
+                                  to the clipboard. </li>
+                                <li><b>Log-to-file:</b> Write debug output to 
+                                  a file as its being captured.</li>
+                                <li><b>Printing:</b> Print all or part of captured 
+                                  debug output to a printer. </li>
+                                <li><b>One-file payload: </b><i>DebugView</i> 
+                                  is implemented as one file.</li>
+                                <li> <b>Crash-Dump Support:</b> <i>DebugView</i> 
+                                  can recover its buffers from a crash dump and 
+                                  save the output to a log file so that users 
+                                  can send you the output your NT driver generated 
+                                  right up to the time of a crash.</li>
+                              </ul>
+                              <p>The on-line help-file describes all these features, 
+                                and more, in detail.</p>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="2" valign="middle" height="40"><span class='sectionheader'>Installation 
+                              and Use</span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="2"><b></b>Simply execute 
+                              the <i>DebugView</i> program file (dbgview.exe) 
+                              and <i>DebugView</i> will immediately start capturing 
+                              debug output. To run <i>DebugView</i> on Windows 
+                              95 you must get the <a
+ href="http://www.microsoft.com/windows95/downloads/contents/wuadmintools/s_wunetworkingtools/w95sockets2/default.asp?site=95">WinSock2 
+                              update</a> from Microsoft. Note that if you run 
+                              <i>DebugView</i> on Windows NT/2K/XP you must have 
+                              administrative privilege to view kernel-mode debug 
+                              output. Menus, hot-keys, or toolbar buttons can 
+                              be used to clear the window, save the monitored 
+                              data to a file, search output, change the window 
+                              font, and more. The on-line help describes all of 
+                              <i>DebugView</i>'s features.<br>
+                              <br>
+                              <img src="../../images/screenshots/dbgshot.gif" width="549" height="341"></td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="2"><br>
+                              This is a screenshot of <i>DebugView</i> capturing 
+                              Win32 debug output from a remote system. Note the 
+                              presence of a highlighting filter.</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="2" align="center"><br>
+                              <br>
+                              <br>
+                              <b>In order to help us track its use, please download 
+                              through the link that represents the operating system 
+                              on which you will use or mostly use <i>DebugView</i>. 
+                              <br>
+                              <br>
+                              Note that the zip files are identical, and <i>DebugView</i> 
+                              runs on all Windows platforms.</b><br>
+                              <br>
+                              <a href="../../files/dbgv98.zip"><b>Download DebugView 
+                              (x86 - 169KB) - you plan on using DebugView on Win9x/Me</b></a><b><br>
+                              <br>
+                              <a href="../../files/dbgvnt.zip">Download DebugView 
+                              (x86 169KB) - you plan on using DebugView on WinNT/2K/XP</a><br>
+                              <br>
+                              <a href="../../files/dbgvaxp.zip">Download DebugView 
+                              (Alpha - 170KB)</a></b><br>
+                              <br>
+                              <a href="#top"><b>Back to Top</b></a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </TD>
+              </TR>
+            </TABLE>
+            <!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

@@ -1,0 +1,23 @@
+Steps for running the MelissaExMerge.exe program to remove messages containing the virus from mailboxes on an Exchange Server.
+=============================================================================================================================
+
+
+A) Install the Exchange Administrator program on the machine that you need to run MelissaExMerge.
+B) Unzip the MelissaExMerge.zip file into a folder
+C) Log into Windows NT with the Exchange Service Account
+D) From Windows Explorer, double click on MelissaExMerge.exe
+
+
+1) Select the Two Step Mode. Click Next (DO NOT SELECT ONE STEP)
+2) Select "Copy data to Personal Folders". Click Next
+3) Click Options.
+4) On the Data page.Select only "User messages and folders"
+5) On the Dates page, select "Dated" and enter a range of dates. DO NOT SELECT ALL
+6) On the Folders page, select "Process only these folders" and add the Inbox, Deleted Items,Sent Items and other folders you want to run the program against.
+6) On the Import Procedure page, select "Archive data to target store"
+7) Click Yes and OK
+8) Enter the Exchange Server Name. Click Next
+8) Select all mailboxes. Click Next
+9) Click Next
+
+

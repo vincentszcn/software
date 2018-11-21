@@ -1,0 +1,518 @@
+<html><!-- #BeginTemplate "/Templates/template.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Sysinternals Freeware - Inside Windows 2000</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html;">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</script>
+<link rel=stylesheet href="includes/default.css" type="text/css">
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff" background="images/background.gif"   onLoad="MM_preloadImages('images/topmenu_images/otop_menu_resources.gif','images/topmenu_images/otop_menu_aboutus.gif','images/topmenu_images/otop_menu_global.gif','images/sidemenu_images/oside_menu_98_utilities.gif','images/sidemenu_images/oside_menu_utilities.gif','images/sidemenu_images/oside_menu_source.gif','images/sidemenu_images/oside_menu_information.gif','images/sidemenu_images/oside_menu_98_source.gif','images/sidemenu_images/oside_menu_98_information.gif','images/topmenu_images/otop_menu_resources.gif','images/topmenu_images/otop_menu_sitemap.gif','images/topmenu_images/otop_menu_licensing.gif','images/topmenu_images/otop_menu_aboutus.gif','images/topmenu_images/otop_menu_global.gif')">
+<table width="770" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td rowspan="4" width="226" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><a href="index.shtml"><img src="images/logo.gif" width="227" height="67" border="0"></a></td>
+        </tr>
+        <tr valign="top"> 
+          <td height="479"><SCRIPT LANGUAGE="JavaScript1.2" TYPE="text/javascript">
+<!--
+	JM_DOM = (document.getElementById) ? true : false;
+	JM_NS4 = (document.layers) ? true : false;
+	JM_NS4old = (JM_NS4 && (parseFloat(navigator.appVersion) < 4.02));
+	JM_IE = (document.all) ? true : false;
+	JM_IE4 = JM_IE && !JM_DOM;
+	JM_IE4M = JM_IE4 && JM_Mac;
+	JM_IsMenu = (JM_DOM || (JM_NS4 && !JM_NS4old) || (JM_IE && !JM_IE4M));
+
+	
+	if ((JM_NS4 || JM_DOM) && !JM_IE) {
+		searchWidth = 7;
+		emailWidth= 12;
+		vgmWidth = 7;
+	} else {
+		searchWidth = 14;
+		emailWidth= 14;
+		vgmWidth = 11;
+	}
+//-->
+</SCRIPT>
+
+<table width="179" border="0" cellspacing="0" cellpadding="0" height="279">
+  <tr valign="top"> 
+    <td width="179" valign="top"><img src="images/sidemenu_images/side_menu_top.gif" width="179" height="92" align="top"><br>
+      <a href="ntw2k/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image16','','images/sidemenu_images/oside_menu_utilities.gif',1)"><img name="Image16" border="0" src="images/sidemenu_images/side_menu_utilities.gif" width="179" height="23" align="top"></a> 
+      <a href="ntw2k/source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','images/sidemenu_images/oside_menu_source.gif',1)"><img name="Image11" border="0" src="images/sidemenu_images/side_menu_source.gif" width="179" height="22" align="top"></a> 
+      <a href="ntw2k/information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','images/sidemenu_images/oside_menu_information.gif',1)"><img name="Image12" border="0" src="images/sidemenu_images/side_menu_information.gif" width="179" height="27" align="top"></a> 
+      <img src="images/sidemenu_images/side_menu_middle.gif" width="179" height="50" align="top"><br>
+      <a href="win9x/98utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image13" border="0" src="images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> 
+      <a href="win9x/98source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','images/sidemenu_images/oside_menu_98_source.gif',1)"><img name="Image14" border="0" src="images/sidemenu_images/side_menu_98_source.gif" width="179" height="26" align="top"></a> 
+      <a href="win9x/98information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','images/sidemenu_images/oside_menu_98_information.gif',1)"><img name="Image15" border="0" src="images/sidemenu_images/side_menu_98_information.gif" width="179" height="24" align="top"></a>
+      <img src="images/sidemenu_images/side_menu_linux.gif" width="179" height="50" border="0" align="top"><br>
+      <a href="linux/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image131','','images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image131" border="0" src="images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> <br><br>
+	</td>		
+  </tr>
+  <tr>
+    <td valign="bottom"> 
+      <form method="get" action="http://search.atomz.com/search/">
+        <img src="images/sidemenu_images/side_menu_search.gif" width="179" height="25" border="0" align="top"> 
+        <img src="/images/spacer.gif" width="10" height="5">
+		<script language="JavaScript">document.write("<input type='text' size=" + searchWidth + " name='sp-q'>")</script>
+        &nbsp;
+<input type="image" border="0" name="Sign Up!2" src="images/sidemenu_images/go.gif" width="35" height="20" alt="Sign Up!" class="floatright"  align="absmiddle">
+        <input type=hidden name="sp-a" value="sp1000b352">
+      </form>
+    </td>
+ </tr> 
+</table>
+ </td>
+        </tr>
+      </table>
+    </td>
+    <td colspan="2" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><img src="images/top_arch.gif" width="581" height="48" align="bottom"></td>
+        </tr>
+        <tr valign="top"> 
+          <td valign="top"><table width="581" border="0" cellspacing="0" cellpadding="0" height="48">
+  <tr valign="top"> 
+    <td><a href="othresources.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','images/topmenu_images/otop_menu_resources.gif',1)"><img name="Image7" border="0" src="images/topmenu_images/top_menu_resources.gif" width="115" height="45" align="top"></a><a href="sitemap.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/topmenu_images/otop_menu_sitemap.gif',1)"><img name="Image8" border="0" src="images/topmenu_images/top_menu_sitemap.gif" width="91" height="45" align="top"></a><a href="licensing.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/topmenu_images/otop_menu_licensing.gif',1)"><img name="Image9" border="0" src="images/topmenu_images/top_menu_licensing.gif" width="75" height="45" align="top"></a><a href="aboutus.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','images/topmenu_images/otop_menu_aboutus.gif',1)"><img src="images/topmenu_images/filler.gif" width="6" height="45" align="top" border="0"><img name="Image6" border="0" src="images/topmenu_images/top_menu_aboutus.gif" width="75" height="45" align="top"></a><a href="index.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image192','','images/topmenu_images/otop_menu_home.gif',1)"><img name="Image192" border="0" src="images/topmenu_images/top_menu_home.gif" width="61" height="45" align="top"></a><img src="images/topmenu_images/top_menu_filler.gif" width="37" height="45" align="top"><img src="images/topmenu_images/top_menu_end.gif" width="121" height="45" align="top"></td>
+  </tr>
+</table>
+<!-- #BeginEditable "Section%20title/logo" --><img src="images/freeware/inside_w2k.gif" width="519" height="25"><a name='top'></a><br><br><!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top"> 
+      <table width="570" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top"> 
+          <td colspan="3" height="429"><!-- #BeginEditable "Body" -->
+            <table border="0" cellspacing="0" cellpadding="0" width="579">
+              <tr> 
+                <td valign="bottom" align="left" colspan="5">
+                  <table border="0" cellspacing="0" cellpadding="0" width="578">
+                    <tr> 
+                      <td colspan="5"> 
+                        
+<table width="569" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td align="right" valign="top"><font color="#192A84"><img src="../images/subnav_images/subnav_leftbluebar.gif" width="160" height="7"></font></td>
+    <td valign="top" rowspan="3" colspan="4"><a href="#inside" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image551','','../images/subnav_images/subnav_book_oinside.gif',1)"><img name="Image551" border="0" src="../images/subnav_images/subnav_book_inside.gif" width="97" height="21"></a><a href="#ordering" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image552','','../images/subnav_images/subnav_book_oordering.gif',1)"><img src="../images/subnav_images/subnav_filler.gif" width="14" height="21" border="0"><img name="Image552" border="0" src="../images/subnav_images/subnav_book_ordering.gif" width="126" height="21"><img src="../images/subnav_images/subnav_filler.gif" width="14" height="21" border="0"></a><a href="#tool" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image553','','../images/subnav_images/subnav_book_otoolupd.gif',1)"><img name="Image553" border="0" src="../images/subnav_images/subnav_book_toolupd.gif" width="90" height="21"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image552','','../images/subnav_images/subnav_book_oordering.gif',1)"><img src="../images/subnav_images/subnav_filler.gif" width="14" height="21" border="0"></a><a href="#errata" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image554','','../images/subnav_images/subnav_book_oerrata.gif',1)"><img name="Image554" border="0" src="../images/subnav_images/subnav_book_errata.gif" width="49" height="21"></a></td>
+  </tr>
+  <tr>
+    <td><span class='include'>Last Updated July 15, 2002</span></td>
+  </tr>
+</table>
+
+
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td colspan="2">&nbsp;</td>
+                      <td width="97">&nbsp;</td>
+                      <td width="97">&nbsp;</td>
+                      <td width="161">&nbsp;</td>
+                    </tr>
+                    <tr> 
+                      <td colspan="5"> 
+                        <table width="580" border="0" cellspacing="0" cellpadding="0">
+                          <tr> 
+                            <td rowspan="2" valign="top" width="169"><span class="freeware">Introduction</span></td>
+                            <td rowspan="2" valign="top" width="403" colspan="2">This 
+                              is the errata and updates page for the book <i>Inside 
+                              Microsoft Windows 2000, Third Edition</i>, by David 
+                              Solomon (of <a href="http://www.solsem.com">David 
+                              Solomon Expert Seminars</a>) and Mark Russinovich. 
+                              If you have general feedback for us, find an inaccuracy, 
+                              or have a suggestion for the next edition, please 
+                              send e-mail to <a
+href="mailto:insidew2k@sysinternals.com">insidew2k@Sysinternals.com</a>. We'll 
+                              post corrections and tool updates to this page.</td>
+                            <td rowspan="2" valign="top" width="7">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" width="1"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> </tr>
+                          <tr> 
+                            <td colspan="4"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> </tr>
+                          <tr> 
+                            <td colspan="4" bgcolor="#F2F2F2"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="4"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td rowspan="2" valign="top" width="169">
+                              <p><span class="freeware"><a name='inside'></a>Inside 
+                                the Book</span></p>
+                              <p><span class="freeware"><img src="images/mini_book.gif" width="139" height="198"></span></p>
+                            </td>
+                            <td rowspan="2" valign="top" width="403" colspan="2"><span class="description"> 
+                              This third edition of the Inside Windows NT series 
+                              provides the most in-depth coverage of Windows NT 
+                              technology yet, filling over 900 pages. The 50% 
+                              increase in size over the previous edition is the 
+                              result of the following additions:
+                              <ul>
+                                <li>New experiments that demonstrate key concepts 
+                                  and reveal internal behavior.</li>
+                                <li>More detailed coverage of interrupt handling, 
+                                  security, file system drivers, and the I/O system. 
+                                </li>
+                                <li>Specifics on Windows 2000 updates of memory 
+                                  management, the cache manager, the object manager, 
+                                  security, the job object, and more.</li>
+                                <li>Coverage of topics not included in the second 
+                                  edition, including networking, storage management, 
+                                  services, WMI, plug and play, power management, 
+                                  the registry, startup and shutdown, crashes, 
+                                  and terminal services support.</li>
+                              </ul>
+                              </span></td>
+                            <td rowspan="2" valign="top" width="7">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" width="1"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> </tr>
+                          <tr> 
+                            <td colspan="4"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td rowspan="2" width="169" valign="top">&nbsp;</td>
+                            <td rowspan="2" valign="top" width="403" colspan="2"> 
+                              <p><span class="description">For the first time 
+                                in the series, the third edition comes with a 
+                                CD that contains the following: </span></p>
+                              <span class="description"> 
+                              <UL>
+                                <LI><I>LiveKd</I>, a utility that lets you run 
+                                  any standard Microsoft kernel debugger (i386kd, 
+                                  Windbg, kd) on a live system. With <I>LiveKd</I> 
+                                  there's no need for a second computer or serial 
+                                  cable to run most of the experiements in the 
+                                  book. <I>LiveKd</I> is only available with this 
+                                  book.</LI>
+                                <LI><I>KVarPerf</I>, a performance monitor extension 
+                                  that lets you monitor in real-time the value 
+                                  of any kernel variable. <I>KVarPerf</I> has 
+                                  already been used to find a bug in Windows 2000! 
+                                  <I>KVarPer</I> is only available with this book</LI>
+                                <LI>A copy of NTOSKRNL symbols for NT 4 SP1-6a 
+                                  and Windows 2000, with a copy of the Microsoft 
+                                  kernel debuggers.</LI>
+                                <LI>A copy of the entire Sysinternals web site.</LI>
+                                <LI>The eBook version of the book.</LI>
+                              </UL>
+                              </span></td>
+                            <td rowspan="2" valign="top" width="7">&nbsp;</td>
+                          </tr>
+                          <tr> </tr>
+                          <tr> 
+                            <td colspan="4"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td rowspan="2" valign="top" width="169">&nbsp;</td>
+                            <td rowspan="2" valign="top" width="403" colspan="2"><font color="#000000">The 
+                              book has a foreword by Jim Allchin, Group Vice President 
+                              of Platforms at Microsoft, and a historical perspective 
+                              by David Cutler, lead architect of Windows NT. Here's 
+                              the book's table of contents:</font> </td>
+                            <td rowspan="2" valign="top" width="7">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" width="1"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> </tr>
+                          <tr> 
+                            <td colspan="4"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td rowspan="2" valign="top" width="169"><span class="freeware"></span></td>
+                            <td rowspan="2" valign="top" width="201"> 
+                              <ol>
+                                <li>Introduction </li>
+                                <li>Architecture </li>
+                                <li>System Mechanisms </li>
+                                <li>Management Mechanisms </li>
+                                <li>Startup and Shutdown </li>
+                                <li>Processes, Threads and Jobs</li>
+                                <li>Memory Management </li>
+                              </ol>
+                            </td>
+                            <td rowspan="2" valign="top" width="202"> 
+                              <ol>
+                                <li>Security </li>
+                                <li>I/O System </li>
+                                <li>Storage </li>
+                                <li>Cache Manager </li>
+                                <li>File Systems </li>
+                                <li>Networking </li>
+                              </ol>
+                            </td>
+                            <td rowspan="2" valign="top" width="7">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" width="1"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> </tr>
+                          <tr> 
+                            <td colspan="4"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> </tr>
+                          <tr> 
+                            <td colspan="4" bgcolor="#F2F2F2"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="4"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td rowspan="2" valign="top" width="169"><span class="freeware"><a name='ordering'></a>Ordering 
+                              the Book</span></td>
+                            <td rowspan="2" valign="top" width="403" colspan="2"><span class="description">You 
+                              can order the book from Amazon.com:<BR>
+                              <BR>
+                              <A
+HREF="http://www.amazon.com/exec/obidos/ASIN/0735610215/o/qid=957490318/sr=8-1/ref=aps_sr_b_1_1/103-5793119-3499040/systemsinternals/104-5168346-5077529">Order 
+                              <I>Inside Microsoft Windows 2000</I> from Amazon.com</A></span></td>
+                            <td rowspan="2" valign="top" width="7">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" width="1"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> </tr>
+                          <tr> 
+                            <td colspan="4"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> </tr>
+                          <tr> 
+                            <td colspan="4" bgcolor="#F2F2F2"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="4"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td rowspan="2" valign="top" width="169"><span class="freeware"><a name='Tool'></a>Tool 
+                              Updates</span></td>
+                            <td rowspan="2" valign="top" width="403" colspan="2"><span class="description"><A
+HREF="files/livekd-update.zip">Download LiveKd v2.0 patch (49 KB)</A> 
+                              <UL>
+                                <li><i><span class="description"><i><span class="description">[July 
+                                  16, 2002] LiveKd now works with Windows XP and 
+                                  the Microsoft symbol server</span></i><span class="description"><i></i><br>
+                                  <br>
+                                  </span></span></i><span class="description">Now 
+                                  you can run LiveKd on Windows XP. Although Kd 
+                                  and WinDbg have live debug capability on XP 
+                                  with the -kl switch, LiveKd supports more commands 
+                                  on a live system, such as !stacks</span><span class="description">.<br>
+                                  <br>
+                                  </span></li>
+                                <li><i>[August 16, 2001] LiveKd reports a symbol 
+                                  mismatch even though the correct symbols are 
+                                  installed</i><br>
+                                  <br>
+                                  This corrects a bug where LiveKd would report 
+                                  that the symbols installed do not match the 
+                                  kernel version when they actually do.<br>
+                                  <BR>
+                                </li>
+                                <LI>[September 16, 2000] <I>LiveKd causes crash 
+                                  when virus scanner on-access scanning is enabled</I> 
+                                  <BR>
+                                  <BR>
+                                  <I>LiveKd</I> has been reported to have incompatibilities 
+                                  with several virus scanners, including Computer 
+                                  Associate's Inoculan IT and Symantec's Norton 
+                                  Antivirus.</LI>
+                              </UL>
+                              </span></td>
+                            <td rowspan="2" valign="top" width="7">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" width="1"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> </tr>
+                          <tr> 
+                            <td colspan="4"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> </tr>
+                          <tr> 
+                            <td colspan="4" bgcolor="#F2F2F2"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="4"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td rowspan="2" valign="top" width="169"><span class="freeware"><a name='Errata'></a>Errata</span></td>
+                            <td rowspan="2" valign="top" width="403" colspan="2"><span class="description"> 
+                              </span><span class="description"> 
+                              <UL>
+                                <li><span class="description">[August 24, 2001] 
+                                  <i> &quot;Interrupt vector&quot;, not &quot;interrupt 
+                                  level&quot;</i><br>
+                                  On page 100 the text &quot;Thus, if a device 
+                                  uses interrupt level 5, its ISR executes at 
+                                  IRQL 22.&quot; should read &quot;Thus, if a 
+                                  device uses interrupt <i>number</i> 5, its ISR 
+                                  executes at IRQL 22.&quot;<br>
+                                  <br>
+                                  </span></li>
+                                <LI>[July 6, 2001] <i> LargePageMinimum correction</i><br>
+                                  On page 383 it states that the LargePageMinimum 
+                                  Registry value is interpreted in megabytes, 
+                                  when it is actually interpreted in pages. Also, 
+                                  the default value equals 128 MB, meaning that 
+                                  large pages are by default only used to map 
+                                  system virtual memory when there is less than 
+                                  or equal to 128 MB of physical memory present.<br>
+                                  <br>
+                                </LI>
+                                <LI>[February 12, 2001] Section, not Selection<br>
+                                  In stage 1 of Figure 6-5 on page 305 it should 
+                                  say, &quot;Open EXE and create section object&quot; 
+                                  instead of &quot;selection object&quot;.<br>
+                                  <br>
+                                </LI>
+                                <LI>[February 12, 2001] <i>CreateThread flow correction</i>s<br>
+                                  On page 334, point 3d of the CreateThread flow 
+                                  should read &quot;The thread's kernel stack 
+                                  is allocated.&quot;<br>
+                                  <br>
+                                  On page 335, in the point 6e of the CreateThread 
+                                  flow, the first sentence should say, &quot;Finally, 
+                                  the main thread begins execution in user mode.&quot;<br>
+                                  <br>
+                                </LI>
+                                <LI>[September 27, 2000] <I>Hash algorithm for 
+                                  local passwords not RC4</I> <BR>
+                                  In page 203 it says that the Recovery Console 
+                                  (RC) uses RC4 to hash the password a user enters 
+                                  and compare it with a hash in the SAM. In actuality, 
+                                  it hashes the password with MD5, uses the system 
+                                  key (Windows 2000 uses Syskey encryption to 
+                                  encrypt the SAM) to encrypt the hash with RC4, 
+                                  and then compares the encrypted hash with the 
+                                  encrypted hash stored in the SAM.<BR>
+                                  <BR>
+                                </LI>
+                                <LI>[September 27, 2000] <I>Clarification on Winsock 
+                                  QOS APIs</I> <BR>
+                                  On page 842 it says that only applications with 
+                                  administrative privilege can use QOS when it 
+                                  should say that only applications with administrative 
+                                  privilege can <I>manage</I> QOS, including use 
+                                  functions like <I>WSCInstallQOSTemplate</I>.<BR>
+                                  <BR>
+                                </LI>
+                                <LI>[September 16, 2000] <I>Quantum tool is not 
+                                  on CD</I> <BR>
+                                  Table 1-2 on page 18, which shows a list of 
+                                  tools for viewing Windows 2000 internals, incorrectly 
+                                  lists a tool named <I>Quantum</I> as being on 
+                                  the CD. A <I>Quantum</I> tool was originally 
+                                  planned for inclusion with the book, but was 
+                                  never written.<BR>
+                                  <BR>
+                                </LI>
+                                <LI>[September 16, 2000] <I>APIC experiment description 
+                                  correction</I> <BR>
+                                  On page 95 the experiment entitled &quot;Viewing 
+                                  the PIC and APIC&quot; mistakenly describes 
+                                  the output of the !apic command as being from 
+                                  the &quot;I/O APIC for processor 0&quot;. It 
+                                  should instead say &quot;...so this is the local 
+                                  APIC for processor 0&quot;.<BR>
+                                  <BR>
+                                </LI>
+                                <LI>[September 5, 2000] <I>LiveKd does not run 
+                                  from CD</I> <BR>
+                                  Although the readme.txt on the book's accompanying 
+                                  CD indicates that you can run <I>LiveKd</I> 
+                                  from the CD, you cannot. <I>LiveKd</I> reports 
+                                  an &quot;access denied&quot; error when it tries 
+                                  to create a simulated crash dump file. <BR>
+                                  <BR>
+                                  If you are running Windows 2000 SP0 you can 
+                                  easily run <I>LiveKd</I> by installing the \Debuggers 
+                                  directory from the CD to your hard drive, and 
+                                  then typing &quot;livekd&quot; in the install 
+                                  directory. If you are running Windows 2000 SP1 
+                                  or a version of NT 4 then you can install the 
+                                  debuggers directory to your hard drive and type 
+                                  the following command from the install directory: 
+                                  &quot;livekd -y &lt;path to installed symbols&gt;&quot; 
+                                  (you do not need to specify the path to the 
+                                  symbols if you set the _NT_SYMBOL_PATH environment 
+                                  variable to refer to their location). Also see 
+                                  the LiveKd v1.01 patch in the Tools Update section 
+                                  above.<BR>
+                                </LI>
+                              </UL>
+                              </span></td>
+                            <td rowspan="2" valign="top" width="7">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" width="1"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> </tr>
+                          <tr> 
+                            <td colspan="4"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                          <tr> </tr>
+                          <tr> 
+                            <td colspan="4"><img src="images/subnav_images/spacer.gif" width="1" height="5"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr> 
+                <td colspan="5" rowspan="3" valign="top" align="center"><a href="#top"><b>Back 
+                  to Top</b></a> </td>
+              </tr>
+              <tr> </tr>
+              <tr> </tr>
+            </table>
+            <!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

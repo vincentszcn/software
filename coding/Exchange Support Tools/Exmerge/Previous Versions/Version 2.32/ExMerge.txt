@@ -1,0 +1,368 @@
+***************************************************************
+Microsoft Exchange Mailbox Merge Program, v2.32
+Developed by: Kali Buhariwalla, Microsoft Technical Support
+***************************************************************
+
+The Microsoft Exchange Mailbox Merge Program is a program that will 
+allow a Microsoft Exchange Administrator to extract data from mailboxes
+on a Microsoft Exchange Server and then merge this data into the same 
+mailboxes on another Microsoft Exchange Server.
+
+The program copies data from the source server into Personal Folders 
+(.PST files) and then merges the data, in the Personal Folders, into 
+the mailboxes on the destination server.
+
+The program has two modes of operation: One Step and Two Step.
+In the One Step mode, the program will copy data from the source mailbox to a .PST file and then merge the data in the .PST file into the same mailbox on the destination server. In this case, the mailbox on the destination server must have the same mailbox name as well the same container path. The Distinguished Name(DN) of the mailbox on the destination server is obtained by replacing the Organization and Site names in the the DN of the mailbox on the source server with the Organization and Sites names of the destination server.
+
+In the Two Step mode, the user has the option of only copying data to 
+.PST files or merging data from .PST files into a server.
+
+In order for this program to successfully work, the user must be logged
+into Windows NT with the Microsoft Exchange Service Account. If this is
+not possible, then the current Windows NT account must have permissions
+on all mailboxes selected to be merged.
+
+LOGGING
+=======
+The program creates a log file called C:\EXMERGE.LOG containing any
+errors encountered during operation.
+
+Version 1.5 and higher of the program support the following command line options which control the amount of information logged:
+-logmin, -logmed, -logmax
+
+
+RUNNING THE PROGRAM
+==========================
+This program will only run Windows NT 4.0 or later.
+
+Before running this program, make sure that the Microsoft Exchange Client and the Microsoft Exchange Administrator program is installed on the machine that ExMerge.exe is being run on.
+
+To run the program, double on the ExMerge.exe program from the 
+Windows NT explorer.
+
+LIMITATIONS
+===========
+This version of the program will only merge user folders and messages. 
+It does not support Inbox Rules, forms and Schedule+ data. This program
+will merge Outlook Calendars and Contacts.
+
+Messages copied will lose their single instance storage and this may 
+result in the size of the Microsoft Exchange Private Information Storage increasing significantly.
+
+USING EXMERGE WHEN THE INFORMATION STORE WON'T START
+=========================================================
+Assume the production server is called SERVERP and another test
+server is called SERVERT
+
+1) Create a new (blank) Information Store on SERVERP, by moving
+   out all the files in the EXCHSRVR\MDBDATA directory. This will 
+   allow the Information Store service to start.
+2) Restore/Recover the old information store onto SERVERT.
+3) Stop the Information Store service on SERVERP.
+4) Stop the Information Store service on SERVERT.
+5) On SERVERT, rename the EXCHSRVR\MDBDATA directory to MDBDATA.OLD
+6) On SERVERT create a new directory called EXCHSRVR\MDBDATA.
+7) On SERVERP, rename the EXCHSRVR\MDBDATA directory to MDBDATA.NEW
+8) On SERVERP create a new directory called EXCHSRVR\MDBDATA.
+9) On SERVERP, from the EXCHSRVR\MDBDATA.NEW directory copy the PRIV.EDB
+   and the PUB.EDB files to the EXCHSRVR\MDBDATA directory on SERVERT.
+10) On SERVERT, from the EXCHSRVR\MDBDATA.OLD directory copy the PRIV.EDB
+   and the PUB.EDB files to the EXCHSRVR\MDBDATA directory on SERVERP.
+   Hence we have swapped the PRIV.EDB and PUB.EDB files on the two servers.
+11) On SERVERP, run ISINTEG -patch
+12) On SERVERT, run ISINTEG -patch.
+13) Run the ExMerge program to now merge all data from SERVERT into SERVERP.
+ 
+
+KNOWN ISSUES
+==============
+Problems getting mailboxes on a server.
+--------------------------------------------------------
+1) Check server name
+2) Check organization and site names.
+3) Verify that the DS and IS are running on the server. The program gets 
+   the list of mailboxes from the IS, since it also gets the mailbox size.
+4) Sometimes the list displayed may not contain all the mailboxes on the Exchange 
+   server. Mailboxes that have never been logged into, have no Information
+   store object and hence these mailboxes are not detected. This behaviour
+   is also noticed in the Microsoft Exchange Administrator program when 
+   viewing the Mailbox Resources of the Private Information Store. The
+   workaround to this problem is to log into the Microsoft Exchange client
+   and send an e-mail message to all mailboxes on that server. This will
+   create mailbox objects in the IS for all mailboxes.
+
+Error configuring message service (MSEMS)
+--------------------------------------------------------------
+This error may be reported in the ExMerge.log.
+This error could be generated if there is no Directory object for mailbox object that exists in the Information Store. Check the Mailbox Resources page of the Private Information Store, in the Admin program and then verify that Directory Objects exists for the mailboxes listed in the Mailbox Resources.
+Directory objects can be created manually, or by using the DS/IS adjustment. 
+Please make sure you understand the implications of running the DS/IS adjustment BEFORE running it.
+
+Error opening message store (MSEMS). Verify you have the correct permissions to log on
+----------------------------------------------------------------------------------------
+Make sure that you are logged into Windows NT with an account that has rights to the mailboxes you are trying to access using ExMerge.exe
+It may be easiest to log into Windows NT, using the Microsoft Exchange Service Account.
+
+Error creating Message Service (MSPST MS)
+----------------------------------------------------------------
+Make sure that Microsoft Exchange client is installed on the machine on which
+ExMerge.exe is being run.
+
+Error configuring message service (MSPST MS)
+---------------------------------------------------------------------
+The ALIAS NAME  of the mailbox is more than 8 characters in length
+and exmerge.exe is unable to create the longfilename on the drive specified.
+This has been seen to occur in on Netware Drives which do not support longfilenames.
+
+Error opening message store (MSPST MS). Verify you have the correct permissions to log on
+-----------------------------------------------------------------------------------------
+Check whether a non US English version of the Exchange client or Outlook is installed on the
+machine running ExMerge. You can verify this by looking at the MAPISVC.INF file in the 
+WINNT\System32 directory. 
+
+To resolve this problem, you need to use version 1.6 or later of ExMerge.exe
+
+Create an INI file called EXMERGE.INI in the same directory as the ExMerge.exe executable.
+Add the following entry to this file
+
+[EXMERGE]
+LocalisedPersonalFoldersServiceName=<Localised Personal Folders Service Name>
+
+Where <Localised Personal Folders Service Name> is the localised name of the Personal Folders service. This is normally the name displayed in the client, when you add the Personal Folders service to your profile.
+You can also determine the localised name at the [MSPST MS] section of the MAPISVC.INF file.
+
+Store 'MSPST MS' was not opened
+-------------------------------
+Check whether a non US English version of the Exchange client or Outlook is installed on the
+machine running ExMerge. You can verify this by looking at the MAPISVC.INF file in the 
+WINNT\System32 directory. 
+
+To resolve this problem, you need to use version 1.6 or later of ExMerge.exe
+
+Create an INI file called EXMERGE.INI in the same directory as the ExMerge.exe executable.
+Add the following entry to this file
+
+[EXMERGE]
+LocalisedPersonalFoldersServiceName=<Localised Personal Folders Service Name>
+
+Where <Localised Personal Folders Service Name> is the localised name of the Personal Folders service. This is normally the name displayed in the client, when you add the Personal Folders service to your profile.
+You can also determine the localised name at the [MSPST MS] section of the MAPISVC.INF file.
+
+By default, ExMerge will recognise the names in Spanishm, German and French. For other languages, the correct value will have to be added to the EXMERGE.INI file.
+
+
+Store 'MSEMS' was not opened
+----------------------------
+This error is noticed when running ExMerge on machine with a localised version of NT and Exchange Server.
+
+To resolve this problem, you need to use version 1.62 or later of ExMerge.exe
+
+Create an INI file called EXMERGE.INI in the same directory as the ExMerge.exe executable.
+Add the following entry to this file
+
+[EXMERGE]
+LocalisedExchangeServerServiceName=<Localised Exchange Server Service Name>
+
+Where <Localised Exchange Server Service Name> is the localised name of the Exchange Server  service. This normally the value of the PR_PROVIDER_ DISPLAY entry under the [EMS_MDB_private] section of the MAPISVC.INF file.
+
+By default, ExMerge will recognise the names in German and French. For other languages, the correct value will have to be added to the EXMERGE.INI file.
+
+
+VERSION INFORMATION
+=====================
+
+Version 1.3
+----------------
+Fixed a problem noticed when aliases longer than 18 characters in length
+are encountered.
+The following error is logged.
+"Error creating MAPI profile"
+
+Version 1.4
+----------------
+Added functionality to copy messages individually, if we 
+encounter the MAPI_W_PARTIAL_COMPLETION error.
+
+Added extra logging, when errors are encountered during the 
+message copy process.
+
+Version 1.5
+----------------
+Added additional logging capabilities.
+Added support for the following logging command line options to 
+control logging output.
+-logmin
+-logmed
+-logmax
+Added symbolic information in the release executable.
+
+Version 1.51
+--------------
+Added additional logging capabilities
+
+Version 1.6
+------------
+Added support for use on machines with localised (Non US English) clients 
+installed. Previously, if a non US English client was installed on the machine
+running ExMerge, the program would fail with an error
+"Error opening message store (MSPST MS). Verify you have the correct permissions to log on."
+
+The reason for this was that the program was looking for a service with the name 
+"Personal Folders". However, in localised clients the name of the service is different.
+This version of the program can now recognise the "Personal Folders" services on machines
+with the French, German or Spanish clients installed.
+
+For all other localised clients, the program reads an INI file to get the the localised name 
+of the Personal Folders service. It reads the value of the LocalisedPersonalFoldersServiceName 
+entry under the [EXMERGE] section. 
+
+Version 1.61
+------------
+Modified the program so that the localised name in the EXMERGE.INI file is given priority. Hence the program first checks the entry in the INI file and then checks the internal list of localised names.
+Also, after finding a match, the program now does not continue checking for any other matches.
+
+Version 1.62
+------------
+Added support for use on against localised (Non US English) Exchange Servers. Previously, if ExMerge was run against a non US English Exchange server, the program would fail with an error:
+
+"Store 'MSEMS' was not opened" 
+
+The reason for this was that the program was looking for a service with the name 
+"Microsoft Exchange Message Store". However, in localised servers the name of the service is different.
+This version of the program can now recognise the "Microsoft Exchange Message Store" services on machines with the French or German clients installed.
+
+For all other localised clients, the program reads an INI file to get the the localised name 
+of the Exchange Server service. It reads the value of the LocalisedExchangeServerServiceName
+entry under the [EXMERGE] section. 
+
+Version 1.63
+------------
+Instead of restricting messages based on PR_CREATION time, we restrict them based on PR_DELIVERY_TIME.
+This will allow the merging of messages based on the time they were delivered to the mailbox, rather than when they were created.
+
+Version 1.7
+-----------
+Added the capability of being able to specify folders to be ignored.
+Added the capability of restricting messages by time in addition to date.
+Fixed a bug, whereby the columns were not displayed in the column listbox
+on the page where the mailboxes need to be selected.
+
+Version 1.71
+------------
+Added the ability to specify folder name mappings. This is useful when merging data extracted on a machine with one language client, on a machine with another language client installed.
+For example, when the data was extracted to a PST file, the English client was used. This will cause the PST file to contain folders with the names, Inbox, Outbox, Deleted Items, Sent Items, etc. However if this PST file is then used to merge data on a machine with the German client installed, the folder names of the default Exchange folders could be generated in German, and this will cause the merge process to not merge into real Inbox, Outbox, etc, but to create new folders with those names.
+
+This problem is resolved by the use of EXMERGE.INI file entries.
+A new entry called MapFolderNameToLocalisedName is added to the [EXMERGE] section. If this setting is 1, then the program will read mappings from the section called [Folder Name Mappings]. The mappings are of the format:
+<Old Folder Name>=<New Folder Name>
+
+what this means is that if the source folder name is <Old Folder Name> and it does not exist on the destination, then the program will look for a folder called <New Folder Name>. If this folder exists on the destination, the data from <Old Folder Name> will be merged into <New Folder Name> on the destination. However, if <New Folder Name> also does not exist on the destination, the program will create a folder called <Old Folder Name> on the destination.
+
+Version 1.72
+-------------
+Added the -NoOSCheck command line switch.
+When this switch is specified, the program will not check the version of the Operating System being run on.
+This switch should not be normally used.
+Normally, the program requires Windows NT 4.0 or later.
+
+Version 2.00
+------------
+Added support for copying associated messages in folders.
+This allows the program to support rules associated with folders, as long as the server version is 5.0 or later.
+This is because in version 5.0 and later, the rules are saved as associated messages, whereas in version 4.0, the rules were saved as one binary object.
+
+Added support for checking for the existance of the Admin program and client on the local machine. This should help avoid some of the common problems encountered due to the Admin program or client not being installed on the local machine.
+
+Version 2.01
+------------
+Fixed a bug, where the if you have selected to merge data between certain dates, the total disk space required, was still calculated based on the total mailbox size. This caused a problem if you want to extract data between certain dates, and though you have enough free disk space for the amount of data to be extracted, you do not have enough free disk space for the entire store to be extracted.
+In previous versions, even though you are extracting data for a few days, the program would not allow you to continue, unless you have enough free disk space, to extract the entire store.
+
+Fixed a problem, in which when you browse to select a new directory for the location of the PST files, the current directory is displayed, instead of the directory previously selected.
+
+Fixed a bug adding the year 2000, to the beginning or ending dates when selecting messages based on date.
+
+Version 2.10
+-------------
+Added support for reading configuration information from an .INI file
+This allows the program to be run, using the Windows NT scheduler.
+The program now supports the following command line options:
+
+EXMERGE -B -F FILENAME [-LOGMIN | -LOGMED | -LOGMAX] [NOCHECKS]
+
+Where:
+-B		-	Operate in Batch Mode. Do not display any windows.
+-D		-	Display Window with progress data. Only applicable when
+			the -B option is specified.
+FILENAME	-	Name of a setting file containing the settings to use
+-LOGMIN		-	Minimum logging level
+-LOGMED		-	Medium logging level
+-LOGMAX		-	Maximum  logging level
+-NOCHECKS	-	The program will not perform any checks on the version of the
+			OS being run on. It will also not check whether the Admin program
+			and client is installed on the local machine. 
+
+Version 2.11
+------------
+Modified the dialogs for entering source and destination profile information.
+The user no longer needs to enter the Org and Site names.
+Using the server name specified, the program will automatically get the Org and Site names.
+This should make the program easier to use and eliminate errors caused by incorrect Org and Site names.
+
+The program also has the ability to have message selection options specified when merging data from PST files into a Server (Step2 of the Two Step procedure). Previously, there was no control over which messages could be merged from a PST into a store.
+
+Fixed a bug with the way the number of selected items was displayed, if after a list of names was displayed, you clicked the Back button, and changed the server name and then clicked next again.
+
+If errors are encountered during the merge process, but the program was able to continue past these errors, in previous versions, there was no indication that this errors have occurred, unless you looked at the log file. Now, if these errors are detected, when the program ends, it will display a message saying that errors were detected, and details can be found in the log.
+
+When running in batch mode, the user can provide a list of mailboxes that exist on different servers. The program will automatically connect to the other servers and operate on the mailboxes, permitted we have the correct rights.
+
+Version 2.20
+-------------
+Added support to specify different source and target DNs in the mailboxes.txt file. This allows the migration of data between mailboxes in different orgs.
+
+Added the ability to specify folders that only should be processed. This is the reverse of specifying folders to be ignored. This will also help during migration where only certain folders may need to be migrated.
+
+Fixed a bug, where the free disk space was not calculated correctly if a UNC path was specified.
+
+Added horizontal scrollbars on the listboxes used for folder selection.
+
+Fixed a bug, where the program could not generate a profile before starting the merging.
+This occurred if the length of the alias was a certain length and the date and time string was a certain
+length. Reduced the length of the date and time portion of the profile name, so that we do not exceed the 
+64 character profile name length limit.
+
+Version 2.21
+------------
+Fixed a bug encountered when reading the list of recipients on server the following error is received.
+"Error creating MAPI profile (ExMerge - <Server Name> 18:48:07 - Thursday, September 03, 1998)"
+This error is generated because the MAPI profile name was longer than the 64 characters allowed.
+Changed the program to abbreviate the date and month portion of the date in the profile name.
+
+Changed the error message displayed when an error is encountered getting the recipients on a server.
+
+"Error encountered reading list of recipients on server 'CLT-EXCHANGE-04'.Verify the Microsoft Exchange Organization and Site names entered. Make sure you have Admin permissions on the Private Information Store object. Please refer to the 'C:\ExMerge.log' log file for more information."
+
+Removed the reference to Org and Site names, since these are no longer entered.
+
+Version 2.30
+------------
+Added the ability to overwrite existing messages in the target store, by deleting them and then copying the messages from the source store.
+
+Fixed a bug in which under some rare circumstances (not enough free memory), the program would not recognise existing messages and copy another instance of an existing message into the target store.
+
+Fixed a bug in which if an invalid server is specified in the INI file and you are not running in batch mode, the invalid server name is not ignored and you may run into an error when trying to extract the list of mailboxes on that server.
+
+Version 2.31
+------------
+When running ExMerge on a machine the following error is received:
+"The Microsoft Exchange Administrator program was not found on the local machine. Please install the Administrator program and then run ExMerge.exe"
+
+The error is generated even though the Admin program is installed on the local machine.
+This error was generated because the NT account logged in did not have full rights to the registry, which we read to determine whether the  Admin program is installed on the local machine. This was most often seen if the NT account logged in did not have NT Admin access.
+Fixed this problem. The program now opens the read with only Read access.
+
+Version 2.32
+------------
+Added additional logging to indicate the number of folders to be ignored or processed that have been read from the INI or folders file.

@@ -1,0 +1,277 @@
+<html><!-- #BeginTemplate "/Templates/template.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Sysinternals Freeware - Information for Windows NT and Windows 2000 - TCPView</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html;">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</script>
+<link rel=stylesheet href="../../includes/default.css" type="text/css">
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff" background="../../images/background.gif"   onLoad="MM_preloadImages('../../images/topmenu_images/otop_menu_resources.gif','../../images/topmenu_images/otop_menu_aboutus.gif','../../images/topmenu_images/otop_menu_global.gif','../../images/sidemenu_images/oside_menu_98_utilities.gif','../../images/sidemenu_images/oside_menu_utilities.gif','../../images/sidemenu_images/oside_menu_source.gif','../../images/sidemenu_images/oside_menu_information.gif','../../images/sidemenu_images/oside_menu_98_source.gif','../../images/sidemenu_images/oside_menu_98_information.gif','../../images/topmenu_images/otop_menu_resources.gif','../../images/topmenu_images/otop_menu_sitemap.gif','../../images/topmenu_images/otop_menu_licensing.gif','../../images/topmenu_images/otop_menu_aboutus.gif','../../images/topmenu_images/otop_menu_global.gif')">
+<table width="770" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td rowspan="4" width="226" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><a href="../../index.shtml"><img src="../../images/logo.gif" width="227" height="67" border="0"></a></td>
+        </tr>
+        <tr valign="top"> 
+          <td height="479"><SCRIPT LANGUAGE="JavaScript1.2" TYPE="text/javascript">
+<!--
+	JM_DOM = (document.getElementById) ? true : false;
+	JM_NS4 = (document.layers) ? true : false;
+	JM_NS4old = (JM_NS4 && (parseFloat(navigator.appVersion) < 4.02));
+	JM_IE = (document.all) ? true : false;
+	JM_IE4 = JM_IE && !JM_DOM;
+	JM_IE4M = JM_IE4 && JM_Mac;
+	JM_IsMenu = (JM_DOM || (JM_NS4 && !JM_NS4old) || (JM_IE && !JM_IE4M));
+
+	
+	if ((JM_NS4 || JM_DOM) && !JM_IE) {
+		searchWidth = 7;
+		emailWidth= 12;
+		vgmWidth = 7;
+	} else {
+		searchWidth = 14;
+		emailWidth= 14;
+		vgmWidth = 11;
+	}
+//-->
+</SCRIPT>
+<table width="176" border="0" cellspacing="0" cellpadding="0" height="279">
+  <tr valign="top"> 
+    <td height="291"><img src="../../images/sidemenu_images/side_menu_top.gif" width="179" height="92" align="top"><br>
+      <a href="../../ntw2k/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image16','','../../images/sidemenu_images/oside_menu_utilities.gif',1)"><img name="Image16" border="0" src="../../images/sidemenu_images/side_menu_utilities.gif" width="179" height="23" align="top"></a> 
+      <a href="../../ntw2k/source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','../../images/sidemenu_images/oside_menu_source.gif',1)"><img name="Image11" border="0" src="../../images/sidemenu_images/side_menu_source.gif" width="179" height="22" align="top"></a> 
+      <a href="../../ntw2k/information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','../../images/sidemenu_images/oside_menu_information.gif',1)"><img name="Image12" border="0" src="../../images/sidemenu_images/side_menu_information.gif" width="179" height="27" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_middle.gif" width="179" height="50" align="top"><br>
+      <a href="../../win9x/98utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image13" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> 
+      <a href="../../win9x/98source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','../../images/sidemenu_images/oside_menu_98_source.gif',1)"><img name="Image14" border="0" src="../../images/sidemenu_images/side_menu_98_source.gif" width="179" height="26" align="top"></a> 
+      <a href="../../win9x/98information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','../../images/sidemenu_images/oside_menu_98_information.gif',1)"><img name="Image15" border="0" src="../../images/sidemenu_images/side_menu_98_information.gif" width="179" height="24" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_linux.gif" width="179" height="50" border="0" align="top"><br>
+      <a href="../../linux/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image131','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image131" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> <br><br>
+    </td>
+  <tr>
+    <td valign="bottom"> 
+      <form method="get" action="http://search.atomz.com/search/">
+        <img src="../../images/sidemenu_images/side_menu_search.gif" width="179" height="25" border="0" align="top"> 
+        <img src="/images/spacer.gif" width="10" height="5"> 
+        <script language="JavaScript">document.write("<input type='text' size=" + searchWidth + " name='sp-q'>")</script>
+        &nbsp;
+        <input type="image" border="0" name="Sign Up!2" src="../../images/sidemenu_images/go.gif" width="35" height="20" alt="Sign Up!" class="floatright"  align="absmiddle">
+        <input type=hidden name="sp-a" value="sp1000b352">
+      </form>
+    </td>
+ </tr> 
+</table>
+
+ </td>
+        </tr>
+      </table>
+    </td>
+    <td colspan="2" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><img src="../../images/top_arch.gif" width="581" height="48" align="bottom"></td>
+        </tr>
+        <tr valign="top"> 
+          <td valign="top"><table width="581" border="0" cellspacing="0" cellpadding="0" height="48">
+  <tr valign="top"> 
+    <td><a href="../../othresources.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','../../images/topmenu_images/otop_menu_resources.gif',1)"><img name="Image7" border="0" src="../../images/topmenu_images/top_menu_resources.gif" width="115" height="45" align="top"></a><a href="../../sitemap.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','../../images/topmenu_images/otop_menu_sitemap.gif',1)"><img name="Image8" border="0" src="../../images/topmenu_images/top_menu_sitemap.gif" width="91" height="45" align="top"></a><a href="../../licensing.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','../../images/topmenu_images/otop_menu_licensing.gif',1)"><img name="Image9" border="0" src="../../images/topmenu_images/top_menu_licensing.gif" width="75" height="45" align="top"></a><a href="../../aboutus.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','../../images/topmenu_images/otop_menu_aboutus.gif',1)"><img src="../../images/topmenu_images/filler.gif" width="6" height="45" align="top" border="0"><img name="Image6" border="0" src="../../images/topmenu_images/top_menu_aboutus.gif" width="75" height="45" align="top"></a><a href="../../index.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image192','','../../images/topmenu_images/otop_menu_home.gif',1)"><img name="Image192" border="0" src="../../images/topmenu_images/top_menu_home.gif" width="61" height="45" align="top"></a><img src="../../images/topmenu_images/top_menu_filler.gif" width="37" height="45" align="top"><img src="../../images/topmenu_images/top_menu_end.gif" width="121" height="45" align="top"></td>
+  </tr>
+</table>
+
+            <!-- #BeginEditable "Section%20title/logo" --><i><b><img
+src="../../images/logos/tcpview.gif" alt="Logo" width="146" height="25"><font face="arial" size="2"><a name='top'></a><br>
+            </font></b></i><b>Copyright &copy; 1998-2002 <a href="mailto:mark@sysinternals.com">Mark 
+            Russinovich</a></b><!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top"> 
+      <table width="570" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top"> 
+          <td colspan="3" height="429"><!-- #BeginEditable "Body" -->
+            <TABLE CELLSPACING="10" CELLPADDING="0" WIDTH="408">
+              <TR valign="top" align="left"> 
+                <TD COLSPAN="2" width="651"> 
+                  <table width="580" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td valign="top"> 
+                        <table width="549" border="0" cellspacing="0" cellpadding="0" dwcopytype="CopyTableRow">
+                          <tr> 
+                            <td colspan="3"><b></b></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="top"><span class='include'>Last 
+                              updated August 10, 2002 v2.22</span> 
+                              <hr>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Awards</span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="middle" colspan="3" align="left"><a href="http://www.wugnet.com"><img src="../../images/wugnet.gif" width="114" height="41" align="absmiddle" border="0"></a></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Introduction</span> 
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="3" align="left"> 
+                              <p><i>TCPView</i> is a Windows program that will 
+                                show you detailed listings of all TCP and UDP 
+                                endpoints on your system, including the local 
+                                and remote addresses and state of TCP connections. 
+                                On Windows NT, 2000 and XP <i>TCPView</i> also 
+                                reports the name of the process that owns the 
+                                endpoint. <i>TCPView</i> provides a more informative 
+                                and conveniently presented subset of the Netstat 
+                                program that ships with Windows.</p>
+                              <p> <font color="#000000"><i>TCPView</i> works on 
+                                Windows NT/2000/XP and Windows 98/Me. You can 
+                                use <em>TCPView</em> on Windows 95 if you get 
+                                the Windows 95 </font><a
+href="http://www.microsoft.com/windows95/downloads/contents/wuadmintools/s_wunetworkingtools/w95sockets2/default.asp?site=95">Winsock 
+                                2 Update</a> from Microsoft.</p>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"> 
+                              <p>&nbsp;</p>
+                              <p><img src="../../images/screenshots/tcpvshot.gif" width="500" height="472"></p>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Using 
+                              TCPView</span></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"> 
+                              <p>When you start <i>TCPView</i> it will enumerate 
+                                all active TCP and UDP endpoints, resolving all 
+                                IP addresses to their domain name versions. You 
+                                can use atoolbar button or menu item to toggle 
+                                the display of resolved names. On Windows XP systems, 
+                                <i>TCPView</i> shows the name of the process that 
+                                owns each endpoint. </p>
+                              <p>By default, <i>TCPView</i> updates every second, 
+                                but you can use the <b>Options|Refresh Rate</b> 
+                                menu item to change the rate. Endpoints that change 
+                                state from one update to the next are highlighted 
+                                in yellow; those that are deleted are shown in 
+                                red, and new endpoints are shown in green. </p>
+                              <p>You can close established TCP/IP connections 
+                                (those labeled with a state of ESTABLISHED) by 
+                                selecting<b> File|Close Connections</b>, or by 
+                                right-clicking on a connection and choosing <b>Close 
+                                Connections</b> from the resulting context menu.</p>
+                              <p>You can save <i>TCPView'</i>s output window to 
+                                a file using the <b>Save</b> menu item. </p>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Source 
+                              Code to Netstatp</span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="3"> Wonder how <i>TCPView</i> 
+                              works? Previous versions relied on SNMP (Simple 
+                              Network Management Protocol) interfaces to obtain 
+                              TCP/IP information. Starting with version 2.0, <i>TCPVIew 
+                              </i>uses the IP Helper interfaces documented in 
+                              MSDN. The complete source for the command-line version 
+                              of <i>TCPView</i>, <i>netstatp</i>, demonstrate 
+                              the IP Helper interface and is available here for 
+                              download.</td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>Related 
+                              Uility</span></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> <a
+href="../../ntw2k/freeware/tdimon.shtml"><i>TDImon</i></a> shows you TCP and UDP 
+                              activity in real-time.<br>
+                              <br>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><a
+href="http://www.winternals.com/products/monitoringtools/tcpviewpro.shtml"><img
+src="../../images/WinProd.gif" alt="Winternals Product" width="87" height="29"
+border="0"></a></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> If you like<i> TCPView</i>, 
+                              you'll love <i>TCPView Pro</i>. <i>TCPView Pro</i>, 
+                              a Winternals Software product, has a number of features 
+                              that make it much more powerful and useful than 
+                              <i>TCPView</i>: 
+                              <ul>
+                                <li>See what process has each endpoint opened 
+                                  (on Win9x as well)</li>
+                                <li>Watch the TCP and UDP activity processes perform 
+                                  in realtime</li>
+                                <li>Used advanced filtering to narrow in on what 
+                                  you want to see</li>
+                                <li>And much more...</li>
+                              </ul>
+                              For more information on <i>TCPView Pro</i>, visit 
+                              its <a
+ href="http://www.winternals.com/products/monitoringtools/tcpviewpro.asp">homepage</a> 
+                              at Winternals.</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle" align="center"> 
+                              <p>&nbsp;</p>
+                              <p><a href="../../files/tcpview.zip"><b>Download 
+                                TCPView (35 KB)</b></a></p>
+                              <p><a href="../../files/netstatp.zip"><b>Download 
+                                Netstatp with Source Code (42 KB)</b></a></p>
+                              <p><a href="#top"><b>Back to Top</b></a> </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </TD>
+              </TR>
+            </TABLE>
+            <!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

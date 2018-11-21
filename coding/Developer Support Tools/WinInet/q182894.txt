@@ -1,0 +1,56 @@
+PRB: Can't Create WinInet Log with Internet Explorer 4.0, 4.1 [ie_dev]
+ID: Q182894    CREATED: 23-MAR-1998   MODIFIED: 08-JAN-1999
+WINDOWS:4.0,4.01
+WINDOWS
+PUBLIC | kbIE400 kbIE401 kbWinInet
+
+
+---------------------------------------------------------------------
+The information in this article applies to:
+
+ - Microsoft Internet Explorer (Programming), versions 4.0, 4.01
+---------------------------------------------------------------------
+
+SYMPTOMS
+========
+
+If you follow the instructions in DbgWinInet.txt from the Platform SDK to
+trace the WinInet calls that Internet Explorer 4.x makes, there is a good
+chance that a log file will not be generated.
+
+CAUSE
+=====
+
+By default Internet Explorer 4.x runs all instances of the browser within a
+single process. If you have the Active Desktop enabled then that process
+was started when you logged on. Therefore if you start up a command prompt
+and set the environment variable wininetlog=1, it will have no impact on
+the Internet Explorer process that is already running. Therefore, the
+WinInet log will not be generated.
+
+RESOLUTION
+==========
+
+Probably the easiest and best way to get around this problem is to set the
+Internet Explorer advanced option that allows you to browse in a new
+process. To set this option, click Internet Options from the View menu and
+click the Advanced tab. Under the Browsing section, check the "Browse in a
+new process" option.
+
+Now you can follow the steps in DbgWinInet.txt to set the wininetlog=1
+environment variable and launch Iexplore.exe from the same command prompt
+to cause the log to be generated. Remember that Internet Explorer will
+create the log file in your desktop directory by default.
+
+STATUS
+======
+
+This is by design.
+
+MORE INFORMATION
+================
+
+DbgWinInet.txt is in the Platform SDK and can be found with the debug
+version of Wininet.dll in the /Mssdk/Bin/Debug/Wininet directory.
+
+Additional query words: kbwininet kbdsi

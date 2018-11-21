@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="swfobject.js"></script>
+
+<script type="text/javascript">
+	function ofc_ready()
+	{
+	}
+
+	function ChartClicked( chart_id, index )
+	{
+		external.ChartClicked(chart_id);
+	}
+
+	function RefreshChart()
+	{
+		tmp = document.getElementById('chart1');
+		x = tmp.reload('cdata.dat');
+		//t=setTimeout("RefreshChart()",3000);
+	}
+	swfobject.registerObject("chart1", "9.0.0", "expressInstall.swf");
+</script>
+
+</head>
+<body style="margin:0px; padding:0px; ">
+		<div>
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="chart1">
+				<param name="movie" value="chart.swf" />
+				<param name="flashvars" value="data-file=cdata.dat" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="chart.swf" width="100%" height="100%">
+					<param name="flashvars" value="data-file=cdata.dat" />
+				<!--<![endif]-->
+					Click the image below to install Adobe Flash Player in Internet Explorer and restart Folder Size to view charts. <br>
+					<a href="http://www.adobe.com/go/getflashplayer" target="_blank">
+						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+					</a>
+				<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+		</div>
+</body>
+</html>
+

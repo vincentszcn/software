@@ -1,0 +1,1 @@
+c:\whoami /ALL > c:\whoami.txt

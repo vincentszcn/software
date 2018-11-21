@@ -1,0 +1,337 @@
+<html><!-- #BeginTemplate "/Templates/template.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Sysinternals Freeware - Information for Windows NT and Windows 2000 - Portmon</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html;">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</script>
+<link rel=stylesheet href="../../includes/default.css" type="text/css">
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff" background="../../images/background.gif"   onLoad="MM_preloadImages('../../images/topmenu_images/otop_menu_resources.gif','../../images/topmenu_images/otop_menu_aboutus.gif','../../images/topmenu_images/otop_menu_global.gif','../../images/sidemenu_images/oside_menu_98_utilities.gif','../../images/sidemenu_images/oside_menu_utilities.gif','../../images/sidemenu_images/oside_menu_source.gif','../../images/sidemenu_images/oside_menu_information.gif','../../images/sidemenu_images/oside_menu_98_source.gif','../../images/sidemenu_images/oside_menu_98_information.gif','../../images/topmenu_images/otop_menu_resources.gif','../../images/topmenu_images/otop_menu_sitemap.gif','../../images/topmenu_images/otop_menu_licensing.gif','../../images/topmenu_images/otop_menu_aboutus.gif','../../images/topmenu_images/otop_menu_global.gif')">
+<table width="770" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td rowspan="4" width="226" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><a href="../../index.shtml"><img src="../../images/logo.gif" width="227" height="67" border="0"></a></td>
+        </tr>
+        <tr valign="top"> 
+          <td height="479"><SCRIPT LANGUAGE="JavaScript1.2" TYPE="text/javascript">
+<!--
+	JM_DOM = (document.getElementById) ? true : false;
+	JM_NS4 = (document.layers) ? true : false;
+	JM_NS4old = (JM_NS4 && (parseFloat(navigator.appVersion) < 4.02));
+	JM_IE = (document.all) ? true : false;
+	JM_IE4 = JM_IE && !JM_DOM;
+	JM_IE4M = JM_IE4 && JM_Mac;
+	JM_IsMenu = (JM_DOM || (JM_NS4 && !JM_NS4old) || (JM_IE && !JM_IE4M));
+
+	
+	if ((JM_NS4 || JM_DOM) && !JM_IE) {
+		searchWidth = 7;
+		emailWidth= 12;
+		vgmWidth = 7;
+	} else {
+		searchWidth = 14;
+		emailWidth= 14;
+		vgmWidth = 11;
+	}
+//-->
+</SCRIPT>
+<table width="176" border="0" cellspacing="0" cellpadding="0" height="279">
+  <tr valign="top"> 
+    <td height="291"><img src="../../images/sidemenu_images/side_menu_top.gif" width="179" height="92" align="top"><br>
+      <a href="../../ntw2k/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image16','','../../images/sidemenu_images/oside_menu_utilities.gif',1)"><img name="Image16" border="0" src="../../images/sidemenu_images/side_menu_utilities.gif" width="179" height="23" align="top"></a> 
+      <a href="../../ntw2k/source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','../../images/sidemenu_images/oside_menu_source.gif',1)"><img name="Image11" border="0" src="../../images/sidemenu_images/side_menu_source.gif" width="179" height="22" align="top"></a> 
+      <a href="../../ntw2k/information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','../../images/sidemenu_images/oside_menu_information.gif',1)"><img name="Image12" border="0" src="../../images/sidemenu_images/side_menu_information.gif" width="179" height="27" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_middle.gif" width="179" height="50" align="top"><br>
+      <a href="../../win9x/98utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image13" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> 
+      <a href="../../win9x/98source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','../../images/sidemenu_images/oside_menu_98_source.gif',1)"><img name="Image14" border="0" src="../../images/sidemenu_images/side_menu_98_source.gif" width="179" height="26" align="top"></a> 
+      <a href="../../win9x/98information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','../../images/sidemenu_images/oside_menu_98_information.gif',1)"><img name="Image15" border="0" src="../../images/sidemenu_images/side_menu_98_information.gif" width="179" height="24" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_linux.gif" width="179" height="50" border="0" align="top"><br>
+      <a href="../../linux/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image131','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image131" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> <br><br>
+    </td>
+  <tr>
+    <td valign="bottom"> 
+      <form method="get" action="http://search.atomz.com/search/">
+        <img src="../../images/sidemenu_images/side_menu_search.gif" width="179" height="25" border="0" align="top"> 
+        <img src="/images/spacer.gif" width="10" height="5"> 
+        <script language="JavaScript">document.write("<input type='text' size=" + searchWidth + " name='sp-q'>")</script>
+        &nbsp;
+        <input type="image" border="0" name="Sign Up!2" src="../../images/sidemenu_images/go.gif" width="35" height="20" alt="Sign Up!" class="floatright"  align="absmiddle">
+        <input type=hidden name="sp-a" value="sp1000b352">
+      </form>
+    </td>
+ </tr> 
+</table>
+
+ </td>
+        </tr>
+      </table>
+    </td>
+    <td colspan="2" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><img src="../../images/top_arch.gif" width="581" height="48" align="bottom"></td>
+        </tr>
+        <tr valign="top"> 
+          <td valign="top"><table width="581" border="0" cellspacing="0" cellpadding="0" height="48">
+  <tr valign="top"> 
+    <td><a href="../../othresources.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','../../images/topmenu_images/otop_menu_resources.gif',1)"><img name="Image7" border="0" src="../../images/topmenu_images/top_menu_resources.gif" width="115" height="45" align="top"></a><a href="../../sitemap.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','../../images/topmenu_images/otop_menu_sitemap.gif',1)"><img name="Image8" border="0" src="../../images/topmenu_images/top_menu_sitemap.gif" width="91" height="45" align="top"></a><a href="../../licensing.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','../../images/topmenu_images/otop_menu_licensing.gif',1)"><img name="Image9" border="0" src="../../images/topmenu_images/top_menu_licensing.gif" width="75" height="45" align="top"></a><a href="../../aboutus.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','../../images/topmenu_images/otop_menu_aboutus.gif',1)"><img src="../../images/topmenu_images/filler.gif" width="6" height="45" align="top" border="0"><img name="Image6" border="0" src="../../images/topmenu_images/top_menu_aboutus.gif" width="75" height="45" align="top"></a><a href="../../index.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image192','','../../images/topmenu_images/otop_menu_home.gif',1)"><img name="Image192" border="0" src="../../images/topmenu_images/top_menu_home.gif" width="61" height="45" align="top"></a><img src="../../images/topmenu_images/top_menu_filler.gif" width="37" height="45" align="top"><img src="../../images/topmenu_images/top_menu_end.gif" width="121" height="45" align="top"></td>
+  </tr>
+</table>
+
+            <!-- #BeginEditable "Section%20title/logo" --><i><b><img
+src="../../images/logos/portmon.gif" alt="Logo" width="461" height="25"><font face="arial" size="2"><a name='top'></a><br>
+            </font></b></i><b>Copyright &copy; 1998-1999 <a href="mailto:mark@sysinternals.com">Mark 
+            Russinovich</a></b><!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top"> 
+      <table width="570" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top"> 
+          <td colspan="3" height="429"><!-- #BeginEditable "Body" -->
+            <TABLE CELLSPACING="10" CELLPADDING="0" WIDTH="408">
+              <TR valign="top" align="left"> 
+                <TD COLSPAN="2" width="651"> 
+                  <table width="580" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td valign="top"> 
+                        <table width="549" border="0" cellspacing="0" cellpadding="0" dwcopytype="CopyTableRow">
+                          <tr> 
+                            <td colspan="3"><b></b></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="top"><span class='include'>Last 
+                              updated June 13, 2000 v3.02</span>
+                              <hr>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Introduction</span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="3" align="left"><i>Portmon</i> 
+                              is a GUI/device driver combination that monitors 
+                              and displays all serial and parallel port activity 
+                              on a system. It has advanced filtering and search 
+                              capabilities that make it a powerful tool for exploring 
+                              the way NT works, seeing how applications use ports, 
+                              or tracking down problems in system or application 
+                              configurations. 
+                              <p><i>Portmon</i> works on NT 4.0, Windows 2000 
+                                (Win2K), Windows 95 and Windows 98.<font face="arial"></font></p>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Portmon 
+                              3.x</span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="3"> &nbsp;Version 3.x of 
+                              <i>Portmon</i> marks the introduction of a number 
+                              of powerful features. 
+                              <ul>
+                                <li><b>Remote monitoring:</b> Capture kernel-mode 
+                                  and/or Win32 debug output from any computer 
+                                  accessible via TCP/IP - even across the Internet. 
+                                  You can monitor multiple remote computers simultaneously. 
+                                  <i>Portmon</i> will even install its client 
+                                  software itself if you are running it on a Windows 
+                                  NT/2K system and are capturing from another 
+                                  Windows NT/2K system in the same Network Neighborhood.</li>
+                                <li><b>Most-recent-filter lists:</b> <i>Portmon</i> 
+                                  has been extended with powerful filtering capabilities 
+                                  and it remembers your most recent filter selections, 
+                                  with an interface that makes it easy to reselect 
+                                  them.</li>
+                                <li><b>Clipboard copy:</b> Select multiple lines 
+                                  in the output window and copy their contents 
+                                  to the clipboard. </li>
+                                <li><b>Highlighting:</b> Highlight debug output 
+                                  that matches your highlighting filter, and even 
+                                  customize the highlighting colors.</li>
+                                <li><b>Log-to-file:</b> Write debug output to 
+                                  a file as its being captured.</li>
+                                <li><b>Printing:</b> Print all or part of captured 
+                                  debug output to a printer. </li>
+                                <li><b>One-file payload: </b><i>Portmon</i> is 
+                                  now implemented as one file.</li>
+                              </ul>
+                              <p>The on-line help-file describes all these features, 
+                                and more, in detail.<br>
+                                <br>
+                                <img src="../../images/screenshots/portshot.gif" width="549" height="343"> 
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>Installation 
+                              and Use </span></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> 
+                              <p>Simply execute the <i>Portmon</i> program file 
+                                (portmon.exe) and <i>Portmon</i> will immediately 
+                                start capturing debug output. To run <i>Portmon</i> 
+                                on Windows 95 you must get the <a
+ href="http://www.microsoft.com/windows95/downloads/contents/wuadmintools/s_wunetworkingtools/w95sockets2/default.asp?site=95">WinSock2 
+                                update</a> from Microsoft. Note that if you run 
+                                <i>Portmon</i> on Windows NT/2K portmon.exe must 
+                                be located on a non-network drive and you must 
+                                have administrative privilege. Menus, hot-keys, 
+                                or toolbar buttons can be used to clear the window, 
+                                save the monitored data to a file, search output, 
+                                change the window font, and more. The on-line 
+                                help describes all of <i>Portmon</i>'s features. 
+                              </p>
+                              <p><i>Portmon</i> understands all serial and parallel 
+                                port I/O control (IOCTLs) commands and will display 
+                                them along with interesting information regarding 
+                                their associated parameters. For read and write 
+                                requests Portmon displays the first several dozen 
+                                bytes of the buffer, using '.' to represent non-printable 
+                                characters. The Show Hex menu option lets you 
+                                toggle between ASCII and raw hex output of buffer 
+                                data. 
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>How 
+                              it Works: WinNT</span></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> 
+                              <p>The <i>Portmon</i> GUI is responsible for identifying 
+                                serial and parallel ports. It does so by enumerating 
+                                the serial ports that are configured under HKEY_LOCAL_MACHINE\Hardware\DeviceMap\SerialComm 
+                                and the parallel ports defined under HKEY_LOCAL_MACHINE\Hardware\DeviceMap\Parallel 
+                                Ports. These keys contain the mappings between 
+                                serial and parallel port device names and the 
+                                Win32-accessible names. </p>
+                              <p>When you select a port to monitor, <i>Portmon</i> 
+                                sends a request to its device driver that includes 
+                                the NT name (e.g. \device\serial0) that you are 
+                                interested in. The driver uses standard filtering 
+                                APIs to attach its own filter device object to 
+                                the target device object. First, it uses <b>ZwCreateFile</b> 
+                                to open the target device. Then it translates 
+                                the handle it receives back from <b>ZwCreateFile</b> 
+                                to a device object pointer. After creating its 
+                                own filter device object that matches the characteristics 
+                                of the target, the driver calls <b>IoAttachDeviceByPointer</b> 
+                                to establish the filter. From that point on the 
+                                <i>Portmon</i> driver will see all requests aimed 
+                                at the target device. A complete source code example 
+                                of filtering is demonstrated by our <a href="../../ntw2k/source/filemon.shtml">Filemon 
+                                </a>file system monitor.</p>
+                              <p><i>Portmon</i> has built-in knowledge of all 
+                                standard serial and parallel port IOCTLs, which 
+                                are the primary way that applications and drivers 
+                                configure and read status information from ports. 
+                                The IOCTLs are defined in the DDK file \ddk\src\comm\inc\ntddser.h 
+                                and \ddk\src\comm\inc\ntddpar.h, and some are 
+                                documented in the DDK. 
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>How 
+                              it Works: Win9x</span></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> 
+                              <p>On Windows 95 and 98, the <em>Portmon</em> GUI 
+                                relies on a dynamically loaded VxD to capture 
+                                serial and parallel activity. The Windows VCOMM 
+                                (Virtual Communications) device driver serves 
+                                as the interface to parallel and serial devices, 
+                                so applications that access ports indirectly use 
+                                its services. The <em>Portmon</em> VxD uses standard 
+                                VxD service hooking to intercept all accesses 
+                                to VCOMM's functions. Like its NT device driver, 
+                                <em>Portmon</em>'s VxD interprets requests to 
+                                display them in a friendly format. 
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>Related Utilities</span></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> 
+                              <p>Here are some other monitoring tools available 
+                                at Sysinternals: 
+                              <ul>
+                                <li><a href="../../ntw2k/source/regmon.shtml">Regmon</a> 
+                                  - a Registry monitor</li>
+                                <li><a href="../../ntw2k/source/filemon.shtml">Filemon</a> 
+                                  - a file system monitor</li>
+                                <li><a href="../../ntw2k/freeware/tdimon.shtml">Tdimon</a> 
+                                  - a TCP/IP monitor</li>
+                                <li><a href="../../ntw2k/freeware/pmon.shtml">PMon</a> 
+                                  - a process and thread monitor (NT/Win2K)</li>
+                                <li><a href="../../ntw2k/freeware/diskmon.shtml">Diskmon</a> 
+                                  - a hard disk monitor (NT/Win2K)</li>
+                                <li><a href="../../ntw2k/freeware/debugview.shtml">DebugView/EE</a> 
+                                  - a debug output monitor</li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle" align="center"> 
+                              <p><br><br><br>
+                                <b>In order to help us track its use, please download 
+                                through the link that represents the operating 
+                                system on <br>
+                                which you will use or mostly use Portmon. <br>
+                                Note that the zip files are identical, and Portmon 
+                                runs on either platform.</b></p>
+                              <p><a href="../../files/portm98.zip"><b>Download Portmon 
+                                (x86 - 52KB) - you plan on using Portmon on Win9x</b></a></p>
+                              <p><a href="../../files/portmon.zip"><b>Download Portmon 
+                                (x86 - 52KB) - you plan on using Portmon on WinNT</b></a></p>
+                              <p><a href="../../files/portaxp.zip"><b>Download Portmon 
+                                (Alpha - 84KB)</b></a></p>
+<a href="#top"><b>Back to Top</b></a> </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </TD>
+              </TR>
+            </TABLE>
+            <!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

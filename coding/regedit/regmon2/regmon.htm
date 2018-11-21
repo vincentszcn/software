@@ -1,0 +1,396 @@
+<html><!-- #BeginTemplate "/Templates/template.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Sysinternals Freeware - Information for Windows NT and Windows 2000 - Regmon</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html;">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</script>
+<link rel=stylesheet href="../../includes/default.css" type="text/css">
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff" background="../../images/background.gif"   onLoad="MM_preloadImages('../../images/topmenu_images/otop_menu_resources.gif','../../images/topmenu_images/otop_menu_aboutus.gif','../../images/topmenu_images/otop_menu_global.gif','../../images/sidemenu_images/oside_menu_98_utilities.gif','../../images/sidemenu_images/oside_menu_utilities.gif','../../images/sidemenu_images/oside_menu_source.gif','../../images/sidemenu_images/oside_menu_information.gif','../../images/sidemenu_images/oside_menu_98_source.gif','../../images/sidemenu_images/oside_menu_98_information.gif','../../images/topmenu_images/otop_menu_resources.gif','../../images/topmenu_images/otop_menu_sitemap.gif','../../images/topmenu_images/otop_menu_licensing.gif','../../images/topmenu_images/otop_menu_aboutus.gif','../../images/topmenu_images/otop_menu_global.gif')">
+<table width="770" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td rowspan="4" width="226" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><a href="../../index.shtml"><img src="../../images/logo.gif" width="227" height="67" border="0"></a></td>
+        </tr>
+        <tr valign="top"> 
+          <td height="479"><SCRIPT LANGUAGE="JavaScript1.2" TYPE="text/javascript">
+<!--
+	JM_DOM = (document.getElementById) ? true : false;
+	JM_NS4 = (document.layers) ? true : false;
+	JM_NS4old = (JM_NS4 && (parseFloat(navigator.appVersion) < 4.02));
+	JM_IE = (document.all) ? true : false;
+	JM_IE4 = JM_IE && !JM_DOM;
+	JM_IE4M = JM_IE4 && JM_Mac;
+	JM_IsMenu = (JM_DOM || (JM_NS4 && !JM_NS4old) || (JM_IE && !JM_IE4M));
+
+	
+	if ((JM_NS4 || JM_DOM) && !JM_IE) {
+		searchWidth = 7;
+		emailWidth= 12;
+		vgmWidth = 7;
+	} else {
+		searchWidth = 14;
+		emailWidth= 14;
+		vgmWidth = 11;
+	}
+//-->
+</SCRIPT>
+<table width="176" border="0" cellspacing="0" cellpadding="0" height="279">
+  <tr valign="top"> 
+    <td height="291"><img src="../../images/sidemenu_images/side_menu_top.gif" width="179" height="92" align="top"><br>
+      <a href="../../ntw2k/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image16','','../../images/sidemenu_images/oside_menu_utilities.gif',1)"><img name="Image16" border="0" src="../../images/sidemenu_images/side_menu_utilities.gif" width="179" height="23" align="top"></a> 
+      <a href="../../ntw2k/source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','../../images/sidemenu_images/oside_menu_source.gif',1)"><img name="Image11" border="0" src="../../images/sidemenu_images/side_menu_source.gif" width="179" height="22" align="top"></a> 
+      <a href="../../ntw2k/information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','../../images/sidemenu_images/oside_menu_information.gif',1)"><img name="Image12" border="0" src="../../images/sidemenu_images/side_menu_information.gif" width="179" height="27" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_middle.gif" width="179" height="50" align="top"><br>
+      <a href="../../win9x/98utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image13" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> 
+      <a href="../../win9x/98source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','../../images/sidemenu_images/oside_menu_98_source.gif',1)"><img name="Image14" border="0" src="../../images/sidemenu_images/side_menu_98_source.gif" width="179" height="26" align="top"></a> 
+      <a href="../../win9x/98information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','../../images/sidemenu_images/oside_menu_98_information.gif',1)"><img name="Image15" border="0" src="../../images/sidemenu_images/side_menu_98_information.gif" width="179" height="24" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_linux.gif" width="179" height="50" border="0" align="top"><br>
+      <a href="../../linux/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image131','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image131" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> <br><br>
+    </td>
+  <tr>
+    <td valign="bottom"> 
+      <form method="get" action="http://search.atomz.com/search/">
+        <img src="../../images/sidemenu_images/side_menu_search.gif" width="179" height="25" border="0" align="top"> 
+        <img src="/images/spacer.gif" width="10" height="5"> 
+        <script language="JavaScript">document.write("<input type='text' size=" + searchWidth + " name='sp-q'>")</script>
+        &nbsp;
+        <input type="image" border="0" name="Sign Up!2" src="../../images/sidemenu_images/go.gif" width="35" height="20" alt="Sign Up!" class="floatright"  align="absmiddle">
+        <input type=hidden name="sp-a" value="sp1000b352">
+      </form>
+    </td>
+ </tr> 
+</table>
+
+ </td>
+        </tr>
+      </table>
+    </td>
+    <td colspan="2" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><img src="../../images/top_arch.gif" width="581" height="48" align="bottom"></td>
+        </tr>
+        <tr valign="top"> 
+          <td valign="top"><table width="581" border="0" cellspacing="0" cellpadding="0" height="48">
+  <tr valign="top"> 
+    <td><a href="../../othresources.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','../../images/topmenu_images/otop_menu_resources.gif',1)"><img name="Image7" border="0" src="../../images/topmenu_images/top_menu_resources.gif" width="115" height="45" align="top"></a><a href="../../sitemap.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','../../images/topmenu_images/otop_menu_sitemap.gif',1)"><img name="Image8" border="0" src="../../images/topmenu_images/top_menu_sitemap.gif" width="91" height="45" align="top"></a><a href="../../licensing.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','../../images/topmenu_images/otop_menu_licensing.gif',1)"><img name="Image9" border="0" src="../../images/topmenu_images/top_menu_licensing.gif" width="75" height="45" align="top"></a><a href="../../aboutus.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','../../images/topmenu_images/otop_menu_aboutus.gif',1)"><img src="../../images/topmenu_images/filler.gif" width="6" height="45" align="top" border="0"><img name="Image6" border="0" src="../../images/topmenu_images/top_menu_aboutus.gif" width="75" height="45" align="top"></a><a href="../../index.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image192','','../../images/topmenu_images/otop_menu_home.gif',1)"><img name="Image192" border="0" src="../../images/topmenu_images/top_menu_home.gif" width="61" height="45" align="top"></a><img src="../../images/topmenu_images/top_menu_filler.gif" width="37" height="45" align="top"><img src="../../images/topmenu_images/top_menu_end.gif" width="121" height="45" align="top"></td>
+  </tr>
+</table>
+
+            <!-- #BeginEditable "Section%20title/logo" --><i><b><img
+src="../../images/logos/regmon.gif" alt="Logo" width="452" height="30"><font face="arial" size="2"><a name='top'></a><br>
+            </font></b></i><b>Copyright &copy; 1996-2002 <a href="mailto:mark@sysinternals.com">Mark 
+            Russinovich</a><font
+color="#000000"><b> and </b></font><a
+href="mailto:cogswell@winternals.com"><b>Bryce Cogswell</b></a></b><!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top"> 
+      <table width="570" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top"> 
+          <td colspan="3" height="429"><!-- #BeginEditable "Body" -->
+            <TABLE CELLSPACING="10" CELLPADDING="0" WIDTH="408">
+              <TR valign="top" align="left"> 
+                <TD COLSPAN="2" width="651"> 
+                  <table width="580" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td valign="top"> 
+                        <table width="549" border="0" cellspacing="0" cellpadding="0" dwcopytype="CopyTableRow">
+                          <tr> 
+                            <td colspan="3" valign="top"><span class='include'>Last 
+                              updated February 28 v4.34</span> 
+                              <hr>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Awards</span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="middle" colspan="3" align="left"><a href="http://www.zdnet.com/downloads/stories/info/0,,000IDA,.html"><img src="../../images/bstar.gif" width="81" height="81" border="0" align="absmiddle"></a><img src="../../images/pcworld.gif" width="137" height="65" align="absmiddle" border="0"><a href="http://www.wugnet.com"><img src="../../images/wugnet.gif" width="114" height="41" align="absmiddle" border="0"></a></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Introduction</span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="3"> <i>Regmon </i>is a Registry 
+                              monitoring utility that will show you which applications 
+                              are accessing your Registry, which keys they are 
+                              accessing, and the Registry data that they are reading 
+                              and writing - all in real-time. This advanced utility 
+                              takes you one step beyond what static Registry tools 
+                              can do, to let you see and understand exactly how 
+                              programs use the Registry. With static tools you 
+                              might be able to see what Registry values and keys 
+                              changed. With <i>Regmon</i> you'll see how the values 
+                              and keys changed.. 
+                              <p><em>Regmon</em> works on Windows NT/2000/XP, 
+                                Windows 95/98/Me and Windows 64-bit.<br>
+                                <br>
+                                <img src="../../images/screenshots/regshot.gif" width="549" height="329"> 
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>Installation and Use 
+</span> </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> Install <em>Regmon</em> 
+                              by copying the files to your hard drive, and start 
+                              it by running Regmon.exe. Menu items and tool bar 
+                              buttons can be used to toggle on and off monitoring, 
+                              disable event capturing, control the scrolling of 
+                              the listview, and save the listview contents to 
+                              an ASCII file. 
+                              <p>Use the Filter dialog, which is accessed with 
+                                a toolbar button or the Edit|Filter/Highlight 
+                                menu selection, to select what data will be shown 
+                                in the list view. The '*' wildcard matches arbitrary 
+                                strings, and the filters are case-insensitive. 
+                                Only matches shown in the include filter, but 
+                                that are not excluded with the exclude filter, 
+                                are displayed. Use ';' to separate multiple strings 
+                                in a filter (e.g. &quot;regmon;software&quot;). 
+                              </p>
+                              <p> For example, if the include filter is HKLM&quot;, 
+                                and the exclude filter is &quot;HKLM\Software&quot;, 
+                                all references to keys and values under HKLM, 
+                                except to those under HKLM\Software will be monitored. 
+                              </p>
+                              <p>Wildcards allow for complex pattern matching, 
+                                making it possible to match specific Registry 
+                                accesses by specific applications, for example. 
+                                The include filter &#147;Winword*Windows&#148; 
+                                would have <i>Regmon</i> only show accesses by 
+                                Microsoft Word to keys and values that include 
+                                the word &#147;Windows&#148;.</p>
+                              <p>Use the highlight filter specify output that 
+                                you want to have highlighted in the listview output. 
+                                Select highlighting colors with Edit|Highlight 
+                                Colors. </p>
+                              <p><em>Regmon</em> can either timestamp events or 
+                                show the time elapsed from the last time you cleared 
+                                the output window (or since you started <i>Regmon</i>). 
+                                The Options menu and the clock toolbar button 
+                                let you toggle between the two modes. The button 
+                                on the toolbar shows the current mode with a clock 
+                                or a stopwatch. When showing duration the Time 
+                                field in the output shows the number of seconds 
+                                it took for the underlying file system to service 
+                                particular requests.</p>
+                              <p><i>Regmon</i> v4.1 introduces a powerful new 
+                                feature. When you see a Registry value or key 
+                                in <i>Regmon's</i> output that you want to edit, 
+                                simply double click on the line that includes 
+                                the reference (or use the Regedit toolbar button) 
+                                and <i>Regmon</i> will take you directly to the 
+                                specific value using Regedit.</p>
+                              <p>Click <a
+href="../../ntw2k/info/regboot.shtml">here</a> to learn about <em>Regmon's </em>boot 
+                                monitoring capability, which is available on Windows 
+                                NT. 
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>How Regmon Works 
+</span> </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> The heart of <i>Regmon 
+                              </i>on Windows 9x is in the virtual device driver, 
+                              Regvxd.vxd. It is dynamically loaded, and in its 
+                              initialization it uses VxD service hooking (see 
+                              our May 1996 Dr. Dobb's Journal article on VxD service 
+                              hooking for more information) to insert itself onto 
+                              the call chain of 16 registry access functions in 
+                              the Windows 95 kernel (Virtual Machine Manager). 
+                              All registry activity, be it from 16-bit programs, 
+                              Win32 applications, or device drivers, are directed 
+                              at these routines, so <i>Regmon </i>catches all 
+                              registry activity taking place on a machine. 
+                              <p>On Windows NT the <em>Regmon</em> loads a device 
+                                driver that uses a technique we pioneered for 
+                                NT called <em>system-call hooking</em>. When a 
+                                user-mode component makes a privileged system 
+                                call, control is transfered to a software interrupt 
+                                handler in NTOSKRNL.EXE (the core of the Windows 
+                                NT operating system). This handler takes a system 
+                                call number, which is passed in a machine register, 
+                                and indexes into a system service table to find 
+                                the address of the NT function that will handle 
+                                the request. By replacing entries in this table 
+                                with pointers to hooking functions, it is possible 
+                                to intercept and replace, augment, or monitor 
+                                NT system services. <i>Regmon</i>, which obviously 
+                                hooks just the Registry-related services, is merely 
+                                one example of this capability in action.</p>
+                              <p>When <i>Regmon </i>sees an open, create or close 
+                                call, it updates an internal hash table that serves 
+                                as the mapping between key handles and registry 
+                                path names. Whenever it sees calls that are handle 
+                                based, it looks up the handle in the hash table 
+                                to obtain the full name for display. If a handle-based 
+                                access references a key opened before Regmon started, 
+                                Regmon will fail to find the mapping in it hash 
+                                table and will simply present the key's value 
+                                instead.</p>
+                              <p>Information on accesses is dumped into an ASCII 
+                                buffer that is periodically copied up to the GUI 
+                                for it to print in its listbox. </p>
+                              <p>For more detailed information on how <i>Regmon 
+                                </i>works on Windows NT, see: </p>
+                              <ul>
+                                <li>&quot;Windows NT System Call Hooking,&quot; 
+                                  by Mark Russinovich and Bryce Cogswell, Dr. 
+                                  Dobb's Journal, January 1997 </li>
+                                <li>&quot;<a
+href="http://www.win2000mag.com/Articles/Index.cfm?ArticleID=4795">Inside NT Utilities</a>&quot;, Windows NT Magazine, February 
+                                  1999.</li>
+                              </ul>
+</td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>Related Utilities 
+</span> </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> Here are some other 
+                              monitoring tools available at Sysinternals: 
+                              <ul>
+                                <li><a
+href="../../ntw2k/source/filemon.shtml">Filemon</a> - a file system activity monitor</li>
+                                <li><a href="../../ntw2k/freeware/tdimon.shtml">Tdimon</a> 
+                                  - a TCP/IP monitor</li>
+                                <li><a href="../../ntw2k/freeware/portmon.shtml">Portmon</a> 
+                                  - a serial and parallel port monitor</li>
+                                <li><a href="../../ntw2k/freeware/pmon.shtml">PMon</a>- 
+                                  a process and thread monitor (NT/Win2K)</li>
+                                <li><a href="../freeware/diskmon.shtml">Diskmon</a> 
+                                  - a hard disk monitor (NT/Win2K)</li>
+                                <li><a href="../../ntw2k/freeware/debugview.shtml">DebugView</a> 
+                                  - a debug output monitor<font face="arial"></font></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>More Information 
+</span> </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP">The following serve as 
+                              additional sources of information on the Windows 
+                              NT/2000/XP and Windows 9x/Me registries: 
+                              <ul>
+                                <li><a href="../../insidew2k.shtml">Inside Windows 
+                                  2000, 3rd Edition</a> by David Solomon and Mark 
+                                  Russinovich, 2000</li>
+                                <li>&quot;Examining the Windows 95 Registry,&quot; 
+                                  by Mark Russinovich and Bryce Cogswell, Windows 
+                                  Developer's Journal, October 1996 </li>
+                                <li><a href="../../publ.shtml">&quot;Inside the Windows 
+                                  NT Registry,&quot;</a> by Mark Russinovich, 
+                                  Windows NT Magazine, April 1997 </li>
+                                <li><img src="../../images/amazongo.gif" border="0" width="68" height="15"
+align="BOTTOM">&nbsp;&nbsp;<a
+href="http://www.amazon.com/exec/obidos/ASIN/1565921704/systemsinternals">&quot;Inside 
+                                  the Windows 95 Registry,&quot;</a> by Ron Petrusha, 
+                                  O'Reilly and Associates, 1996 </li>
+                                <li><img src="../../images/amazongo.gif" border="0" width="68" height="15"
+align="BOTTOM">&nbsp;&nbsp;<a
+href="http://www.amazon.com/exec/obidos/ASIN/1565923782/o/qid=946526688/sr=8-1/102-9688892-9937604/systemsinternals">&quot;Managing 
+                                  the Windows NT Registry&quot;</a> by Paul Robichaux 
+                                  and Robchauxg , O'Reilly and Associates, 1998 
+                                </li>
+                                <li><img src="../../images/amazongo.gif" border="0" width="68" height="15"
+align="BOTTOM">&nbsp;&nbsp;<font color="#000000"><a
+href="http://www.amazon.com/exec/obidos/ASIN/0764504371/systemsinternals">&quot;Windows 
+                                  98 Registry For Dummies,&quot;</a> by Glenn 
+                                  Weadock, IDG Press, 1998 </font> </li>
+                                <li><img src="../../images/amazongo.gif" border="0" width="68" height="15"
+align="BOTTOM">&nbsp;&nbsp;<font color="#000000"><a
+href="http://www.amazon.com/exec/obidos/ASIN/0789716585/systemsinternals">&quot;Using 
+                                  the Windows 98 Registry,&quot;</a> by Jerry 
+                                  Honeycutt, Que, 1998 </font></li>
+                              </ul>
+</td>
+                          </tr>
+                          <tr> 
+                            <td height="50" colspan="3" valign="middle"><a href="http://www.winternals.com"><img src="../../images/WinProd.gif" width="87" height="29" border="0"></a></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> <i>Regmon Enterprise 
+                              Edition</i>, the commercial version of <i>Regmon</i> 
+                              available from <a href="http://www.winternals.com">Winternals 
+                              Software</a>, extends the functionality of <i>Regmon</i> 
+                              with several powerful features, including the ability 
+                              to monitor remote systems and save output to a log 
+                              file as the output generates.</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle" align="center"> 
+                              <p>&nbsp;</p>
+                              <p><strong> In order to help us track its use, please 
+                                download through the link that represents the 
+                                operating system on which you will use or mostly 
+                                use </strong><em><strong>Regmon. </strong></em><strong><br>
+                                <br>
+                                Note that the zip files are identical, and </strong><em><strong>Regmon</strong></em><strong> 
+                                runs </strong><b>on all Windows platforms</b><strong>.</strong></p>
+                              <p><a href="../../files/regmon95.zip"><b>Download 
+                                Regmon (x86 - 72 KB) - you plan on using Regmon 
+                                on Win9x/Me</b></a></p>
+                              <p><a href="../../files/ntregmon.zip"><b>Download 
+                                Regmon (x86 - 72 KB) - you plan on using Regmon 
+                                on WinNT/2K/XP</b></a></p>
+                              <p><b><a href="../../files/regmon64.zip">Download 
+                                Regmon (XP 64-bit Edition/IA64 -116 KB )</a></b></p>
+                              <p><a href="../../files/regsrc.zip"><b>Download 
+                                Regmon plus source (494 KB)</b></a></p>
+                              <a href="#top"><b>Back to Top</b></a> </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </TD>
+              </TR>
+            </TABLE>
+            <!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

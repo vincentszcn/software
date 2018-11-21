@@ -1,0 +1,7 @@
+;
+; Disable Over 4GB Chipset List
+;
+;8086	27A0	Intel i945GM/PM
+8086	A010	Intel NM10Express
+8086	8100	Intel SCH Family
+8086	27AC	Intel i945GME

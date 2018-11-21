@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<HTML DIR="LTR">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Oleview.exe: OLE/COM Object Viewer</TITLE>
+<STYLE TYPE="text/css">
+body	{ color: #000000;
+		background: #FFFFFF;	  
+		font-size: 70%;			
+		font-family: Verdana, Arial, Sans Serif; }
+h1
+		{ font-size: 125%; 
+		margin-bottom:" .5em"; clear:both; }
+h2
+		{ font-size: 110%;  
+		margin-top: "1.5em";
+		margin-bottom:" .5em"; clear:both; }
+h3
+		{ font-size: 100%; 
+		margin-top: "1.2em";  
+		margin-bottom: ".5em"; clear:both; }
+h4
+		{ font-size: 100%; 
+		margin-top: "1.2em";  
+		margin-bottom: ".5em"; clear:both; }
+p
+		{ margin-top:" .6em"; 
+		margin-bottom: ".6em"; }
+ol
+		{ margin-top: ".5em"; 
+		margin-bottom: 0; 
+		margin-left: "2.1em"; 
+		padding-left: "0em";
+		margin-right:"2.1em" }
+ul
+		{ margin-top: ".6em";	 
+		margin-bottom: 0;
+		list-style-type: disc;
+		margin-left: "1.5em";
+		padding-left: "0em";
+		margin-right: "1.5em"; }
+li
+		{ margin-bottom: ".7em"; clear:both; }
+p.browse
+		{text-align: right;
+		margin-top: -.5em;
+		margin-bottom: -.5em;}
+p.note, p.tip, p.important, p.caution, p.warning
+		{ font-weight:bold;
+		clear:both; margin-top: "1.2em";
+		margin-bottom: "-.4em"; }
+p.alert
+	{ margin-left: 1.5em; 
+	margin-top: -1.em; margin-bottom: -.3em; font-weight: bold } 
+
+p.indent	
+		{ margin-left: "1.3em"; }		   
+		
+p.topics	{font-weight: bold}
+p.info		{font-weight: bold}
+p.files		{font-weight: bold}
+p.syntax	{background: #dddddd;
+			margin-top: 1em; 
+			margin-bottom: 1em;}
+dl		{margin-top: -.5em;}
+dt.SyntaxTerm {font-weight: normal}
+a.poplink
+		{ color: "#000000";
+		cursor: "text";
+		text-decoration: "none"; }
+table
+		{ font-size: 100%;
+		margin-top: 1em; 
+		margin-bottom: 1em; 
+		cellpadding: 0.5em; }
+		
+th
+		{ text-align: left;
+		background: #dddddd;
+		vertical-align: bottom;
+		padding: .2em;
+		padding-left: .45em;
+		padding-right: .5em; }
+		
+tr
+		{ vertical-align: top; }
+
+td
+		{ background: #EEEEEE;
+		vertical-align: top;
+		padding: .2em;
+		padding-left: .45em;
+		padding-right: .5em; }
+
+</STYLE>
+
+
+
+</HEAD>
+
+<BODY>
+
+
+<H1>Oleview.exe: OLE/COM Object Viewer</H1>
+
+
+<HR>
+
+<P>This administration and testing tool browses in a structured way, configures, activates, and tests all Microsoft Component Object Model (COM) classes installed on your computer.</P>
+
+
+<P>You can also configure local or system-wide COM settings, including security settings, and enable or disable Distributed COM. You can activate COM classes locally or remotely to test Distributed COM setups. OleView fully supports the Component Categories specification, which is a core COM technology.</P>
+
+<P>Test any COM class by double-clicking its name in Oleview. Oleview then lists the interfaces supported by that class. Double-clicking an interface entry invokes a viewer that exercises that interface.</P>
+
+<P>View type library contents in Oleview to determine what methods, properties, and events a Microsoft ActiveX control supports. You can then copy a formatted OBJECT tag to the Clipboard for inserting into an HTML document. OleView is oriented toward developers and advanced users; however, the user interface offers the ability to toggle between Expert and Novice modes.</P>
+
+<P>OleView displays the registry entries for each class in an easy-to-read format. The registry view (right pane) shows all  relevant registry information, including named values of keys you can activate such as ApartmentModel.</P>
+
+<P>The OleView window highlights active items in bold. One or objects can be activated at the same time. Dragging a file name onto the Oleview window creates a file name and binds to it.</P>
+
+<P>Right-click an object in OleView to see its context menu.</P>
+
+<P>The right pane has tabs for administering COM class information. You can set Distributed COM options and security as well as change keys such as LocalServer32.</P>
+
+<P><B>Notes</B></P>
+<UL>
+<LI>OleView requires Microsoft Windows&nbsp;2000, Microsoft Windows&nbsp;NT version&nbsp;4.0, Microsoft Windows&nbsp;98, or Microsoft Windows&nbsp;95. You must also have installed either Microsoft Internet Explorer 3.0 or higher or the Microsoft ActiveX Software Development Kit (SDK).</LI>
+	<LI>The Microsoft Windows&nbsp;NT version 3.5 and Microsoft Windows&nbsp;NT version 3.51 versions of this tool, OLE2View,  are included with the Microsoft Win32 Software Development Kit (SDK) and Microsoft Visual C++.</LI></UL>
+<P CLASS="files">Files Required</P>
+<UL>
+     <LI>Oleview.exe</LI>
+     <LI>Oleview.htm</LI>
+     <LI>Comcat.dll (installed by Ccdist.exe)</LI>
+     <LI>Ccdist.exe (self-extracting file containing Comcat.dll)</LI>
+     <LI>Ccdist35.exe</LI>
+     <LI>Iviewers.dll</LI>
+</UL>
+
+<A NAME="oleview_topics"></A>
+<P CLASS="topics">OLE/COM Object Viewer Topic</P>
+<UL>
+	 <LI><A HREF="#oleview_setup">Setting Up OleView</A></LI>
+	 <LI><A HREF="#oleview_example">Example: Activating a Remove Server in OleView</A></LI>
+	 <LI><A HREF="#oleview_interface">OLE/COM Object Viewer Interface Viewers</A></LI>
+</UL>
+
+<A NAME="oleview_setup"></A>
+<HR>
+<P class="browse"><A HREF="#top">top</A></P>
+<H2>Setting Up OleView</H2>
+<HR>
+
+<P>To set up OleView, run Ccdist.exe, a self-extracting and self-installing file that contains Comcat.dll.  Comcat.dll implements the Component Categories manager, which applications use to read and write Component Category information to and from the registry. OleView uses Comcat.dll to list the installed components on a system by category.</P>
+
+<A NAME="oleview_example"></A>
+<HR>
+<P class="browse"><A HREF="#top">top</A></P>
+<H2>Example: Activating a Remove Server in OleView</H2>
+<HR>
+<P>You can activate remote servers from within Oleview in either of two ways. </P>
+
+<OL>
+<LI>To use CoGetClassObject:</LI>
+<OL>
+<LI>In the left pane of Oleview, right-click an object.</LI>
+
+<LI>On the <b>Shortcut</b> menu, select the <B>Create Instance On...</B>, and then enter a computer name.</LI>
+
+<P>For example, to activate an object on \\computer1, enter <code><B>computer1</B></code>, and then press <B>OK</B>.</P>
+</OL>
+
+<LI>To use a file moniker bind and ActivateAtStorage:</LI>
+<OL>
+<LI>On the <B>File</B> menu, click <B>Bind To File</B>.</LI>
+<LI>Specify the UNC name of the file you want to bind to. For example, type <code>\\computer1\docs\any.doc</code>.</LI>
+<br><p>Or, you can specify a moniker display name on the command line.</P>
+</OL>
+</OL>
+
+
+<A NAME="oleview_interface"></A>
+<HR>
+<P class="browse"><A HREF="#top">top</A></P>
+<H2>OLE/COM Object Viewer Interface Viewers</H2>
+<HR>
+
+<P>In OleView, interface viewers are Component Object Model (COM) objects. Viewers for IDataObject (Uniform Data Transfer), IDispatch, IPersistXXX, ITypeLib, and ITypeInfo are provided. There is a default interface viewer for IUnknown, so that no matter what interface you click, you get at least the default (taking advantage of the <I>default class</I> capabilities of Component Categories).</P>
+
+<P>The ITypeLib viewer is a type library decompiler. Its output shows the .odl source for the given type library (or the part you have selected).</P>
+
+<P>OLE/COM Object Viewer supports plug-in interface viewers. If you design a COM interface, or would like to use an existing interface, you can create your own interface viewers (see the IDL file for the IInterfaceViewer interface). Create an in-process COM server that implements the IInterfaceViewer interface, and then have it register the following information:</P>
+
+<P><B>HKCR\Interface\{</B><I>the IID you want to view</I><B>}\OleViewerIViewerCLSID = {</B><I>your clsid</I><B>}</B></P>
+
+<P>Use the Component Category Manager to register your viewer's CLSID by implementing the OLEViewer Interface Viewer CATID: {64454F82-F827-11CE-9059-080036F12502}.</P>
+
+<H3>IDL for IInterfaceViewer</H3>
+
+<CODE><PRE>
+// iview.idl
+//
+// Interface definitions for Ole2View Interface Viewers
+//
+import &quot;unknwn.idl&quot;;
+
+// DEFINE_GUID(IID_IInterfaceViewer,0xfc37e5ba,0x4a8e,0x11ce, 0x87,0x0b,0x08,0x00,0x36,0x8d,0x23,0x02);
+//
+// IInterfaceViewer::View can return the following SCODEs
+//
+// S_OK
+// E_INVALIDARG 
+// E_UNEXPECTED
+// E_OUTOFMEMORY        
+// 
+[
+    uuid(fc37e5ba-4a8e-11ce-870b-0800368d2302),
+    object
+]
+interface IInterfaceViewer : IUnknown
+{
+    HRESULT View([in]HWND hwndParent, [in]REFIID riid, [in]IUnknown* punk);
+}
+</PRE></CODE>
+
+</BODY>
+</HTML>

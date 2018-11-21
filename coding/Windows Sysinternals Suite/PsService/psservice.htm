@@ -1,0 +1,295 @@
+<html><!-- #BeginTemplate "/Templates/template.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Sysinternals Freeware - Information for Windows NT and Windows 2000 - PsService</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html;">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</script>
+<link rel=stylesheet href="../../includes/default.css" type="text/css">
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff" background="../../images/background.gif"   onLoad="MM_preloadImages('../../images/topmenu_images/otop_menu_resources.gif','../../images/topmenu_images/otop_menu_aboutus.gif','../../images/topmenu_images/otop_menu_global.gif','../../images/sidemenu_images/oside_menu_98_utilities.gif','../../images/sidemenu_images/oside_menu_utilities.gif','../../images/sidemenu_images/oside_menu_source.gif','../../images/sidemenu_images/oside_menu_information.gif','../../images/sidemenu_images/oside_menu_98_source.gif','../../images/sidemenu_images/oside_menu_98_information.gif','../../images/topmenu_images/otop_menu_resources.gif','../../images/topmenu_images/otop_menu_sitemap.gif','../../images/topmenu_images/otop_menu_licensing.gif','../../images/topmenu_images/otop_menu_aboutus.gif','../../images/topmenu_images/otop_menu_global.gif')">
+<table width="770" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td rowspan="4" width="226" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><a href="../../index.shtml"><img src="../../images/logo.gif" width="227" height="67" border="0"></a></td>
+        </tr>
+        <tr valign="top"> 
+          <td height="479"><SCRIPT LANGUAGE="JavaScript1.2" TYPE="text/javascript">
+<!--
+	JM_DOM = (document.getElementById) ? true : false;
+	JM_NS4 = (document.layers) ? true : false;
+	JM_NS4old = (JM_NS4 && (parseFloat(navigator.appVersion) < 4.02));
+	JM_IE = (document.all) ? true : false;
+	JM_IE4 = JM_IE && !JM_DOM;
+	JM_IE4M = JM_IE4 && JM_Mac;
+	JM_IsMenu = (JM_DOM || (JM_NS4 && !JM_NS4old) || (JM_IE && !JM_IE4M));
+
+	
+	if ((JM_NS4 || JM_DOM) && !JM_IE) {
+		searchWidth = 7;
+		emailWidth= 12;
+		vgmWidth = 7;
+	} else {
+		searchWidth = 14;
+		emailWidth= 14;
+		vgmWidth = 11;
+	}
+//-->
+</SCRIPT>
+<table width="176" border="0" cellspacing="0" cellpadding="0" height="279">
+  <tr valign="top"> 
+    <td height="291"><img src="../../images/sidemenu_images/side_menu_top.gif" width="179" height="92" align="top"><br>
+      <a href="../../ntw2k/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image16','','../../images/sidemenu_images/oside_menu_utilities.gif',1)"><img name="Image16" border="0" src="../../images/sidemenu_images/side_menu_utilities.gif" width="179" height="23" align="top"></a> 
+      <a href="../../ntw2k/source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','../../images/sidemenu_images/oside_menu_source.gif',1)"><img name="Image11" border="0" src="../../images/sidemenu_images/side_menu_source.gif" width="179" height="22" align="top"></a> 
+      <a href="../../ntw2k/information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','../../images/sidemenu_images/oside_menu_information.gif',1)"><img name="Image12" border="0" src="../../images/sidemenu_images/side_menu_information.gif" width="179" height="27" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_middle.gif" width="179" height="50" align="top"><br>
+      <a href="../../win9x/98utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image13" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> 
+      <a href="../../win9x/98source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','../../images/sidemenu_images/oside_menu_98_source.gif',1)"><img name="Image14" border="0" src="../../images/sidemenu_images/side_menu_98_source.gif" width="179" height="26" align="top"></a> 
+      <a href="../../win9x/98information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','../../images/sidemenu_images/oside_menu_98_information.gif',1)"><img name="Image15" border="0" src="../../images/sidemenu_images/side_menu_98_information.gif" width="179" height="24" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_linux.gif" width="179" height="50" border="0" align="top"><br>
+      <a href="../../linux/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image131','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image131" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> <br><br>
+    </td>
+  <tr>
+    <td valign="bottom"> 
+      <form method="get" action="http://search.atomz.com/search/">
+        <img src="../../images/sidemenu_images/side_menu_search.gif" width="179" height="25" border="0" align="top"> 
+        <img src="/images/spacer.gif" width="10" height="5"> 
+        <script language="JavaScript">document.write("<input type='text' size=" + searchWidth + " name='sp-q'>")</script>
+        &nbsp;
+        <input type="image" border="0" name="Sign Up!2" src="../../images/sidemenu_images/go.gif" width="35" height="20" alt="Sign Up!" class="floatright"  align="absmiddle">
+        <input type=hidden name="sp-a" value="sp1000b352">
+      </form>
+    </td>
+ </tr> 
+</table>
+
+ </td>
+        </tr>
+      </table>
+    </td>
+    <td colspan="2" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><img src="../../images/top_arch.gif" width="581" height="48" align="bottom"></td>
+        </tr>
+        <tr valign="top"> 
+          <td valign="top"><table width="581" border="0" cellspacing="0" cellpadding="0" height="48">
+  <tr valign="top"> 
+    <td><a href="../../othresources.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','../../images/topmenu_images/otop_menu_resources.gif',1)"><img name="Image7" border="0" src="../../images/topmenu_images/top_menu_resources.gif" width="115" height="45" align="top"></a><a href="../../sitemap.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','../../images/topmenu_images/otop_menu_sitemap.gif',1)"><img name="Image8" border="0" src="../../images/topmenu_images/top_menu_sitemap.gif" width="91" height="45" align="top"></a><a href="../../licensing.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','../../images/topmenu_images/otop_menu_licensing.gif',1)"><img name="Image9" border="0" src="../../images/topmenu_images/top_menu_licensing.gif" width="75" height="45" align="top"></a><a href="../../aboutus.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','../../images/topmenu_images/otop_menu_aboutus.gif',1)"><img src="../../images/topmenu_images/filler.gif" width="6" height="45" align="top" border="0"><img name="Image6" border="0" src="../../images/topmenu_images/top_menu_aboutus.gif" width="75" height="45" align="top"></a><a href="../../index.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image192','','../../images/topmenu_images/otop_menu_home.gif',1)"><img name="Image192" border="0" src="../../images/topmenu_images/top_menu_home.gif" width="61" height="45" align="top"></a><img src="../../images/topmenu_images/top_menu_filler.gif" width="37" height="45" align="top"><img src="../../images/topmenu_images/top_menu_end.gif" width="121" height="45" align="top"></td>
+  </tr>
+</table>
+ <!-- #BeginEditable "Section%20title/logo" --><i><b><img
+src="../../images/logos/psservice.gif" alt="Logo" width="177" height="25"><font face="arial" size="2"><a name='top'></a><br>
+            </font></b></i><b>Copyright &copy; 2001 <a href="mailto:mark@sysinternals.com">Mark 
+            Russinovich</a></b><!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top"> 
+      <table width="570" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top"> 
+          <td colspan="3" height="429"><!-- #BeginEditable "Body" -->
+            <TABLE CELLSPACING="10" CELLPADDING="0" WIDTH="408">
+              <TR valign="top" align="left"> 
+                <TD COLSPAN="2" width="651"> 
+                  <table width="580" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td valign="top"> 
+                        <table width="549" border="0" cellspacing="0" cellpadding="0" dwcopytype="CopyTableRow">
+                          <tr> 
+                            <td colspan="3"><b></b></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="top"><span class='include'>Last 
+                              updated February 5, 2001 v1.01</span> 
+                              <hr>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Introduction</span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="3" align="left">
+                              <p><i>PsService</i> is a service viewer and controller 
+                                for Windows NT/2K. Like the <i>SC</i> utility 
+                                that's included in the Windows NT and Windows 
+                                2000 Resource Kits, <i>PsService</i> displays 
+                                the status, configuration, and dependencies of 
+                                a service, and allows you to start, stop, pause, 
+                                resume and restart them. Unlike the <i>SC</i> 
+                                utility, <i>PsService</i> enables you to logon 
+                                to a remote system using a different account, 
+                                for cases when the account from which you run 
+                                it doesn't have required permissions on the remote 
+                                system. <i>PsService</i> includes a unique service-search 
+                                capability, which identifies active instances 
+                                of a service on your network. You would use the 
+                                search feature if you wanted to locate systems 
+                                running DHCP servers, for instance. </p>
+                              <p>Finally, <i>PsService</i> works on both NT 4 
+                                and Windows 2000, whereas the Windows 2000 Resource 
+                                Kit version of <i>SC</i> requires Windows 2000, 
+                                and <i>PsService</i> doesn't require you to manually 
+                                enter a &quot;resume index&quot; in order to obtain 
+                                a complete listing of service information.</p>
+                              </td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>Installation</span></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> 
+                              <p>Just copy <i>PsService </i>onto your executable 
+                                path, and type &quot;psservice&quot;.<br>
+                                <br>
+                                <i>PsService </i>works on NT 3.51, NT 4.0, Win2K 
+                                and Windows XP. 
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>Usage</span></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> 
+                              <p>The default behavior of <i>PsService </i>is to 
+                                display the configured services (both running 
+                                and stopped) on the local system. Entering a command 
+                                on the command-line invokes a particular feature, 
+                                and some commands accept options. Typing a command 
+                                followed by &quot;-?&quot; displays information 
+                                on the syntax for the command.<br>
+                                <font color="#000000" size="2" face="arial"></font><br>
+                                <b>usage: psservice [\\computer [-u username] 
+                                [-p password]] &lt;command&gt; &lt;options&gt;</b><br>
+                              <table width="100%" border="0">
+                                <tr> 
+                                  <td valign="top" align="LEFT" width="180"><b>&nbsp;&nbsp;&nbsp; 
+                                    query</b></td>
+                                  <td valign="top">Displays the status of a service</td>
+                                </tr>
+                                <tr> 
+                                  <td valign="top" align="LEFT" width="150"><b>&nbsp;&nbsp;&nbsp;&nbsp;config</b></td>
+                                  <td valign="top">Displays the configuration 
+                                    of a service</td>
+                                </tr>
+                                <tr> 
+                                  <td valign="top" align="LEFT"><b>&nbsp;&nbsp;&nbsp;&nbsp;start</b></td>
+                                  <td valign="top">Starts a service</td>
+                                </tr>
+                                <tr> 
+                                  <td valign="top" align="LEFT"><b>&nbsp;&nbsp;&nbsp;&nbsp;stop</b></td>
+                                  <td valign="top">Stops a service</td>
+                                </tr>
+                                <tr> 
+                                  <td valign="top" align="LEFT"><b>&nbsp;&nbsp;&nbsp;&nbsp;restart</b></td>
+                                  <td valign="top">Stops and then restarts a service</td>
+                                </tr>
+                                <tr> 
+                                  <td valign="top" align="LEFT"><b>&nbsp;&nbsp;&nbsp;&nbsp;pause 
+                                    </b></td>
+                                  <td valign="top">Pauses a service</td>
+                                </tr>
+                                <tr> 
+                                  <td valign="top" align="LEFT"><b>&nbsp;&nbsp;&nbsp;&nbsp;cont</b></td>
+                                  <td valign="top">Resumes a paused service</td>
+                                </tr>
+                                <tr> 
+                                  <td valign="top" align="LEFT"><b>&nbsp;&nbsp;&nbsp;&nbsp;depend</b></td>
+                                  <td valign="top">Lists the services dependent 
+                                    on the one specified</td>
+                                </tr>
+                                <tr> 
+                                  <td valign="top" align="LEFT"><b>&nbsp;&nbsp;&nbsp;&nbsp;find</b></td>
+                                  <td valign="top">Searches the network for the 
+                                    specified service</td>
+                                </tr>
+                                <tr> 
+                                  <td valign="top" align="LEFT"><b>&nbsp;&nbsp;&nbsp;&nbsp;\\computer</b></td>
+                                  <td valign="top">Targets the NT/Win2K system 
+                                    specified. Include the -u switch with a username 
+                                    and password to login to the remote system 
+                                    if your security credentials do not permit 
+                                    you to obtain performance counter information 
+                                    from the remote system. If you specify the 
+                                    -u option, but not a password with the -p 
+                                    option, <i>PsService</i> will prompt you to 
+                                    enter the password and will not echo it to 
+                                    the screen.</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>How it Works</span></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> 
+                              <p><i>PsService</i> uses the Service Control Manager 
+                                APIs that are documented in the Platform SDK.
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>PsTools</span></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> 
+                              <p><i>PsService</i> is part of a growing kit of 
+                                Sysinternals command-line tools that aid in the 
+                                adminstration of local and remote Windows NT/2K 
+                                systems named <a href="../../ntw2k/freeware/pstools.shtml"><i>PsTools</i></a>. 
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="top" align="center"> 
+                              <p><br><br><br>
+                                <a href="../../files/psservice.zip"><b>Download 
+                                PsService (20KB)</b></a></p>
+                              <p><a href="../../files/Pstools.zip"><b>Download PsTools 
+                                Suite</b><font
+face="arial"><b></b></font></a></p>
+<a href="#top"><b>Back to Top</b></a> </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </TD>
+              </TR>
+            </TABLE>
+            <!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

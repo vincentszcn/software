@@ -1,0 +1,33 @@
+
+
+New Features:
+
+	Allow Delimiter Change
+	--------------------
+	Fixed saving/loading of DB Table Name
+	--------------------
+	%{ are parsed in the Security logs
+	GUIDs from %{ are cached
+	Remote DLLs can be used
+	--------------------
+	Exclude Events
+	Re-Cycled searches
+	REG Reads are cached
+	--------------------
+	SQL Support
+	Change Table Name
+	Save Connection String
+	Determine Saved Log Type
+	Re-Ordered Menus
+	Changed Thread list to include the log file being searched
+	New date range dialog
+	Get only newest events
+	Default output directory is the %temp% directory
+	Others
+
+
+and of course, Bug Fixes.
+
+Please report any problems that you encounter.
+
+/Jeff 

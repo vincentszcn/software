@@ -1,0 +1,10 @@
+
+
+
+1. Copy the deleter.ini file to the c:\winnt dir on the server. 
+2. Open it up with notepad and you will see two lines, the second of which will look like this:
+r1=c=US;a=MCI;p=msft;s=alias; Change the 'alias' to the alias that is seeing the looping mail. Then save the file.
+3. Copy over the deleter.dll and put it in the d:\exchsrvr\bin dir
+4. From the run box, run 'regsvr32 deleter.dll'
+5. Cycle all services to allow the changes to take effect. 
+

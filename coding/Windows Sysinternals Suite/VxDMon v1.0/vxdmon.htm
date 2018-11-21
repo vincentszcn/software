@@ -1,0 +1,289 @@
+<html><!-- #BeginTemplate "/Templates/template.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Sysinternals Freeware - Information for Windows 9x  - VxDMon</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html;">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</script>
+<link rel=stylesheet href="../../includes/default.css" type="text/css">
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff" background="../../images/background.gif"   onLoad="MM_preloadImages('../../images/topmenu_images/otop_menu_resources.gif','../../images/topmenu_images/otop_menu_aboutus.gif','../../images/topmenu_images/otop_menu_global.gif','../../images/sidemenu_images/oside_menu_98_utilities.gif','../../images/sidemenu_images/oside_menu_utilities.gif','../../images/sidemenu_images/oside_menu_source.gif','../../images/sidemenu_images/oside_menu_information.gif','../../images/sidemenu_images/oside_menu_98_source.gif','../../images/sidemenu_images/oside_menu_98_information.gif','../../images/topmenu_images/otop_menu_resources.gif','../../images/topmenu_images/otop_menu_sitemap.gif','../../images/topmenu_images/otop_menu_licensing.gif','../../images/topmenu_images/otop_menu_aboutus.gif','../../images/topmenu_images/otop_menu_global.gif')">
+<table width="770" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td rowspan="4" width="226" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><a href="../../index.shtml"><img src="../../images/logo.gif" width="227" height="67" border="0"></a></td>
+        </tr>
+        <tr valign="top"> 
+          <td height="479"><SCRIPT LANGUAGE="JavaScript1.2" TYPE="text/javascript">
+<!--
+	JM_DOM = (document.getElementById) ? true : false;
+	JM_NS4 = (document.layers) ? true : false;
+	JM_NS4old = (JM_NS4 && (parseFloat(navigator.appVersion) < 4.02));
+	JM_IE = (document.all) ? true : false;
+	JM_IE4 = JM_IE && !JM_DOM;
+	JM_IE4M = JM_IE4 && JM_Mac;
+	JM_IsMenu = (JM_DOM || (JM_NS4 && !JM_NS4old) || (JM_IE && !JM_IE4M));
+
+	
+	if ((JM_NS4 || JM_DOM) && !JM_IE) {
+		searchWidth = 7;
+		emailWidth= 12;
+		vgmWidth = 7;
+	} else {
+		searchWidth = 14;
+		emailWidth= 14;
+		vgmWidth = 11;
+	}
+//-->
+</SCRIPT>
+<table width="176" border="0" cellspacing="0" cellpadding="0" height="279">
+  <tr valign="top"> 
+    <td height="291"><img src="../../images/sidemenu_images/side_menu_top.gif" width="179" height="92" align="top"><br>
+      <a href="../../ntw2k/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image16','','../../images/sidemenu_images/oside_menu_utilities.gif',1)"><img name="Image16" border="0" src="../../images/sidemenu_images/side_menu_utilities.gif" width="179" height="23" align="top"></a> 
+      <a href="../../ntw2k/source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','../../images/sidemenu_images/oside_menu_source.gif',1)"><img name="Image11" border="0" src="../../images/sidemenu_images/side_menu_source.gif" width="179" height="22" align="top"></a> 
+      <a href="../../ntw2k/information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','../../images/sidemenu_images/oside_menu_information.gif',1)"><img name="Image12" border="0" src="../../images/sidemenu_images/side_menu_information.gif" width="179" height="27" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_middle.gif" width="179" height="50" align="top"><br>
+      <a href="../../win9x/98utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image13" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> 
+      <a href="../../win9x/98source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','../../images/sidemenu_images/oside_menu_98_source.gif',1)"><img name="Image14" border="0" src="../../images/sidemenu_images/side_menu_98_source.gif" width="179" height="26" align="top"></a> 
+      <a href="../../win9x/98information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','../../images/sidemenu_images/oside_menu_98_information.gif',1)"><img name="Image15" border="0" src="../../images/sidemenu_images/side_menu_98_information.gif" width="179" height="24" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_linux.gif" width="179" height="50" border="0" align="top"><br>
+      <a href="../../linux/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image131','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image131" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> <br><br>
+    </td>
+  <tr>
+    <td valign="bottom"> 
+      <form method="get" action="http://search.atomz.com/search/">
+        <img src="../../images/sidemenu_images/side_menu_search.gif" width="179" height="25" border="0" align="top"> 
+        <img src="/images/spacer.gif" width="10" height="5"> 
+        <script language="JavaScript">document.write("<input type='text' size=" + searchWidth + " name='sp-q'>")</script>
+        &nbsp;
+        <input type="image" border="0" name="Sign Up!2" src="../../images/sidemenu_images/go.gif" width="35" height="20" alt="Sign Up!" class="floatright"  align="absmiddle">
+        <input type=hidden name="sp-a" value="sp1000b352">
+      </form>
+    </td>
+ </tr> 
+</table>
+
+ </td>
+        </tr>
+      </table>
+    </td>
+    <td colspan="2" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><img src="../../images/top_arch.gif" width="581" height="48" align="bottom"></td>
+        </tr>
+        <tr valign="top"> 
+          <td valign="top"><table width="581" border="0" cellspacing="0" cellpadding="0" height="48">
+  <tr valign="top"> 
+    <td><a href="../../othresources.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','../../images/topmenu_images/otop_menu_resources.gif',1)"><img name="Image7" border="0" src="../../images/topmenu_images/top_menu_resources.gif" width="115" height="45" align="top"></a><a href="../../sitemap.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','../../images/topmenu_images/otop_menu_sitemap.gif',1)"><img name="Image8" border="0" src="../../images/topmenu_images/top_menu_sitemap.gif" width="91" height="45" align="top"></a><a href="../../licensing.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','../../images/topmenu_images/otop_menu_licensing.gif',1)"><img name="Image9" border="0" src="../../images/topmenu_images/top_menu_licensing.gif" width="75" height="45" align="top"></a><a href="../../aboutus.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','../../images/topmenu_images/otop_menu_aboutus.gif',1)"><img src="../../images/topmenu_images/filler.gif" width="6" height="45" align="top" border="0"><img name="Image6" border="0" src="../../images/topmenu_images/top_menu_aboutus.gif" width="75" height="45" align="top"></a><a href="../../index.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image192','','../../images/topmenu_images/otop_menu_home.gif',1)"><img name="Image192" border="0" src="../../images/topmenu_images/top_menu_home.gif" width="61" height="45" align="top"></a><img src="../../images/topmenu_images/top_menu_filler.gif" width="37" height="45" align="top"><img src="../../images/topmenu_images/top_menu_end.gif" width="121" height="45" align="top"></td>
+  </tr>
+</table>
+
+            <!-- #BeginEditable "Section%20title/logo" --><i><b><img
+src="../../images/logos/vxdmon.gif" alt="Logo" width="139" height="25"><font face="arial" size="2"><a name='top'></a><br>
+            </font></b></i><b>Copyright &copy; 1997&nbsp;<a href="mailto:mark@sysinternals.com">Mark 
+            Russinovich</a><font
+        color="#000000"><b> and </b></font><a
+        href="mailto:cogswell@winternals.com"><b>Bryce Cogswell</b></a><b> </b></b><!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top"> 
+      <table width="570" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top"> 
+          <td colspan="3" height="429"><!-- #BeginEditable "Body" -->
+            <TABLE CELLSPACING="10" CELLPADDING="0" WIDTH="408">
+              <TR valign="top" align="left"> 
+                <TD COLSPAN="2" width="651"> 
+                  <table width="580" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td valign="top"> 
+                        <table width="549" border="0" cellspacing="0" cellpadding="0" dwcopytype="CopyTableRow">
+                          <tr> 
+                            <td colspan="3"><b><font face="arial"><b> </b></font></b></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="top"><span class='include'>Last 
+                              updated July 9, 1997</span>
+                              <hr>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Introduction</span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="3" align="left" height="119">Windows 
+                              95 does not provide any native support for monitoring 
+                              the performance of VxD services. <i>VxDMon </i>is 
+                              a system monitoring tool that allows you to profile 
+                              Windows 95 VxD performance and behavior. <i>VxDMon</i>'s 
+                              functionality is built on VxD service hooking. By 
+                              using service hooking, VxDMon is able to monitor 
+                              and time, via the Pentium's rdtsc (ReaD Time Stamp 
+                              Counter) instruction, any and all VxD services including 
+                              those of VxDs built into Windows and those added 
+                              by a developer. In addition, VxDMon keeps track 
+                              of VxD service call histories so that it can display 
+                              useful information such as the list of all services 
+                              that were called by a particular service during 
+                              a monitoring session. This combination of VxD performance 
+                              and call history information provides a never-before-seen 
+                              look into the behavior of Windows.</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Installation 
+                              and Use</span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="3"> <i>VxDMon </i>was designed 
+                              for Pentium processors and requires that VXDMON.EXE 
+                              be in the same directory as VXDMON.VXD. It will 
+                              run on a 386 or 486 processor, but performance information 
+                              will not be available since only the Pentium has 
+                              a cycle counter. VXDMON.VXD is a dynamic VxD, meaning 
+                              that no changes to system.ini or the registry are 
+                              necessary. The typical way VxDMON is used is demonstrated 
+                              in the following steps: 
+                              <ol>
+                                <li>Select services to be monitored </li>
+                                <li>Collect performance and control-flow information</li>
+                                <li>View the gathered statistics </li>
+                              </ol>
+                              <p>When <i>VxDMon </i>is started it checks to see 
+                                if a hook profile exists in a file in the current 
+                                directory called profile.dat. If a profile exists, 
+                                <i>VxDMon </i>will ask if you desire that the 
+                                services listed in the profile should be hooked. 
+                                If no profile exists, the main window will open 
+                                without a prompt. To create a hook profile the 
+                                <b>Options|Select</b> Services menu item must 
+                                be selected, which will open a tree-view containing 
+                                all the services listed in a file called services.dat. 
+                                When a service is clicked upon in this view, it 
+                                will toggle between a selected state, indicated 
+                                with a green icon, and an unselected state, indicated 
+                                with a red icon. Yellow icons are used to identify 
+                                VxDs that have some, but not all, of their services 
+                                selected for monitoring. After a profile has been 
+                                created, <i>VxDMon </i>must be told to begin monitoring 
+                                the services selected. Choose the <b>Options|Hook</b> 
+                                Now menu item in the selection window. A profile 
+                                can be saved by choosing <b>Options|Save</b> Hook 
+                                List.</p>
+                              <p>Monitoring begins as soon as the services are 
+                                hooked, and the statistics gathered by <i>VxDMon</i>'s 
+                                VxD can be imported into the user interface by 
+                                choosing <b>Options|Update Statistics</b> in the 
+                                main window. The latest statistics are read from 
+                                the VxD by selecting <b>Options|Update</b>, and 
+                                reset to zero by selecting <b>Options|Reset</b>. 
+                                Depending on the value of the <b>Preferences|Zero 
+                                Statistics on Update</b> selection, <b>Options|Update</b> 
+                                either accumulates the counts (off), or gives 
+                                the counts since the previous Update (on).</p>
+                              <p>Control-flow information can be seen by double 
+                                clicking on a service in the main window, or by 
+                                highlighting a service and choosing <b>Options|Show 
+                                Ancestors</b> or <b>Options|Show Descendants</b>. 
+                                A services ancestors are all services that preceeded 
+                                the service in the control-flow. The immediate 
+                                ancestors of a service include all the services 
+                                that directly called it. Correspondingly, the 
+                                descendants of a service are those services that 
+                                followed it in the control-flow. The immediate 
+                                descendants are those services that were directly 
+                                called by the service. When ancestor or descendant 
+                                information is selected, a new sub-window is opened 
+                                that displays the control-flow hierarchy as a 
+                                tree-view. The same ancestor/descendant selection 
+                                facilities are available in the sub-window so 
+                                that other services can have control-flow windows 
+                                opened for them. Finally, both the main window 
+                                and the control-flow windows have save capabilities 
+                                that dump the windows contents in formatted ASCII 
+                                to a file.</p>
+                              <p><i>VxDMon </i>includes full on-line help that 
+                                describes these steps in detail. It also tells 
+                                you how you can add information about your own 
+                                VxD to <i>VxDMon</i>'s database in order that 
+                                <i>VxDMon </i>can monitor your own VxD services.<br>
+                                <br>
+                                <img src="../../images/screenshots/vxdshot1.gif" width="549" height="295"><br>
+                                <br>
+                                <img src="../../images/screenshots/vxdshot2.gif" width="299" height="169"> 
+                                <br>
+                                <br>
+                                This is a screenshot of <i>VxDMon</i>'s statistics 
+                                for a sample of typical Win95 activity, and a 
+                                call-graph showing VxD services that invoke a 
+                                particular VMM service.<font face="arial"></font> 
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Source 
+                              Code </span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="3"> <i>VxDMon </i>comes 
+                              with full source code. Unlike many of our other 
+                              Windows 95 VxD's, <i>VxDMon </i>is written in assembly 
+                              language so you can build it with the Windows 95 
+                              DDK. The <i>VxDMon </i>GUI was built with Visual 
+                              C++ 2.x.</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle" align="center">
+                              <p>&nbsp;</p>
+                              <p>&nbsp;</p>
+                              <p><a href="../../files/vxdmon.zip"><b>Download VxDMon 
+                                (62KB)</b></a></p>
+                              <p><a href="../../files/vxdsrc.zip"><b>Download VxDMon 
+                                Plus Source (316KB)</b></a><br>
+                                <br>
+                                <a href="#top"><b>Back to Top</b></a> </p>
+                              </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </TD>
+              </TR>
+            </TABLE>
+            <!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

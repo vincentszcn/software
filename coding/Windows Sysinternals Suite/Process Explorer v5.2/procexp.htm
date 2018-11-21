@@ -1,0 +1,456 @@
+<html><!-- #BeginTemplate "/Templates/template.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Sysinternals Freeware - Utilties for Windows NT and Windows 2000 - Process Explorer</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html;">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</script>
+<link rel=stylesheet href="../../includes/default.css" type="text/css">
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff" background="../../images/background.gif"   onLoad="MM_preloadImages('../../images/topmenu_images/otop_menu_global.gif','../../images/sidemenu_images/oside_menu_98_utilities.gif','../../images/sidemenu_images/oside_menu_utilities.gif','../../images/sidemenu_images/oside_menu_source.gif','../../images/sidemenu_images/oside_menu_information.gif','../../images/sidemenu_images/oside_menu_98_source.gif','../../images/sidemenu_images/oside_menu_98_information.gif','../../images/topmenu_images/otop_menu_resources.gif','../../images/topmenu_images/otop_menu_aboutus.gif','../../images/topmenu_images/otop_menu_global.gif')">
+<table width="770" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td rowspan="4" width="226" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><a href="../../index.shtml"><img src="../../images/logo.gif" width="227" height="67" border="0"></a></td>
+        </tr>
+        <tr valign="top"> 
+          <td height="479"><SCRIPT LANGUAGE="JavaScript1.2" TYPE="text/javascript">
+<!--
+	JM_DOM = (document.getElementById) ? true : false;
+	JM_NS4 = (document.layers) ? true : false;
+	JM_NS4old = (JM_NS4 && (parseFloat(navigator.appVersion) < 4.02));
+	JM_IE = (document.all) ? true : false;
+	JM_IE4 = JM_IE && !JM_DOM;
+	JM_IE4M = JM_IE4 && JM_Mac;
+	JM_IsMenu = (JM_DOM || (JM_NS4 && !JM_NS4old) || (JM_IE && !JM_IE4M));
+
+	
+	if ((JM_NS4 || JM_DOM) && !JM_IE) {
+		searchWidth = 7;
+		emailWidth= 12;
+		vgmWidth = 7;
+	} else {
+		searchWidth = 14;
+		emailWidth= 14;
+		vgmWidth = 11;
+	}
+//-->
+</SCRIPT>
+<table width="176" border="0" cellspacing="0" cellpadding="0" height="279">
+  <tr valign="top"> 
+    <td height="291"><img src="../../images/sidemenu_images/side_menu_top.gif" width="179" height="92" align="top"><br>
+      <a href="../../ntw2k/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image16','','../../images/sidemenu_images/oside_menu_utilities.gif',1)"><img name="Image16" border="0" src="../../images/sidemenu_images/side_menu_utilities.gif" width="179" height="23" align="top"></a> 
+      <a href="../../ntw2k/source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','../../images/sidemenu_images/oside_menu_source.gif',1)"><img name="Image11" border="0" src="../../images/sidemenu_images/side_menu_source.gif" width="179" height="22" align="top"></a> 
+      <a href="../../ntw2k/information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','../../images/sidemenu_images/oside_menu_information.gif',1)"><img name="Image12" border="0" src="../../images/sidemenu_images/side_menu_information.gif" width="179" height="27" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_middle.gif" width="179" height="50" align="top"><br>
+      <a href="../../win9x/98utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image13" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> 
+      <a href="../../win9x/98source.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','../../images/sidemenu_images/oside_menu_98_source.gif',1)"><img name="Image14" border="0" src="../../images/sidemenu_images/side_menu_98_source.gif" width="179" height="26" align="top"></a> 
+      <a href="../../win9x/98information.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','../../images/sidemenu_images/oside_menu_98_information.gif',1)"><img name="Image15" border="0" src="../../images/sidemenu_images/side_menu_98_information.gif" width="179" height="24" align="top"></a> 
+      <img src="../../images/sidemenu_images/side_menu_linux.gif" width="179" height="50" border="0" align="top"><br>
+      <a href="../../linux/utilities.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image131','','../../images/sidemenu_images/oside_menu_98_utilities.gif',1)"><img name="Image131" border="0" src="../../images/sidemenu_images/side_menu_98_utilities.gif" width="179" height="18" align="top"></a> <br><br>
+    </td>
+  <tr>
+    <td valign="bottom"> 
+      <form method="get" action="http://search.atomz.com/search/">
+        <img src="../../images/sidemenu_images/side_menu_search.gif" width="179" height="25" border="0" align="top"> 
+        <img src="/images/spacer.gif" width="10" height="5"> 
+        <script language="JavaScript">document.write("<input type='text' size=" + searchWidth + " name='sp-q'>")</script>
+        &nbsp;
+        <input type="image" border="0" name="Sign Up!2" src="../../images/sidemenu_images/go.gif" width="35" height="20" alt="Sign Up!" class="floatright"  align="absmiddle">
+        <input type=hidden name="sp-a" value="sp1000b352">
+      </form>
+    </td>
+ </tr> 
+</table>
+
+ </td>
+        </tr>
+      </table>
+    </td>
+    <td colspan="2" valign="top"> 
+      <table width="50" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><img src="../../images/top_arch.gif" width="581" height="48" align="bottom"></td>
+        </tr>
+        <tr valign="top"> 
+          <td valign="top"><table width="581" border="0" cellspacing="0" cellpadding="0" height="48">
+  <tr valign="top"> 
+    <td><a href="../../othresources.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','../../images/topmenu_images/otop_menu_resources.gif',1)"><img name="Image7" border="0" src="../../images/topmenu_images/top_menu_resources.gif" width="115" height="45" align="top"></a><a href="../../sitemap.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','../../images/topmenu_images/otop_menu_sitemap.gif',1)"><img name="Image8" border="0" src="../../images/topmenu_images/top_menu_sitemap.gif" width="91" height="45" align="top"></a><a href="../../licensing.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','../../images/topmenu_images/otop_menu_licensing.gif',1)"><img name="Image9" border="0" src="../../images/topmenu_images/top_menu_licensing.gif" width="75" height="45" align="top"></a><a href="../../aboutus.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','../../images/topmenu_images/otop_menu_aboutus.gif',1)"><img src="../../images/topmenu_images/filler.gif" width="6" height="45" align="top" border="0"><img name="Image6" border="0" src="../../images/topmenu_images/top_menu_aboutus.gif" width="75" height="45" align="top"></a><a href="../../index.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image192','','../../images/topmenu_images/otop_menu_home.gif',1)"><img name="Image192" border="0" src="../../images/topmenu_images/top_menu_home.gif" width="61" height="45" align="top"></a><img src="../../images/topmenu_images/top_menu_filler.gif" width="37" height="45" align="top"><img src="../../images/topmenu_images/top_menu_end.gif" width="121" height="45" align="top"></td>
+  </tr>
+</table>
+
+            <!-- #BeginEditable "Section%20title/logo" --><i><b><img
+src="../../images/logos/procexp.gif" alt="Logo" width="300" height="25"><font face="arial" size="2"><a name='top'></a><br>
+            </font></b></i><b>Copyright &copy; 1998-2002 <a href="mailto:mark@sysinternals.com">Mark 
+            Russinovich</a></b><!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top"> 
+      <table width="570" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top"> 
+          <td colspan="3" height="429"><!-- #BeginEditable "Body" -->
+            <TABLE CELLSPACING="10" CELLPADDING="0" WIDTH="408">
+              <TR valign="top" align="left"> 
+                <TD COLSPAN="2" width="651"> 
+                  <table width="580" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td valign="top"> 
+                        <table width="564" border="0" cellspacing="0" cellpadding="0" dwcopytype="CopyTableRow">
+                          <tr> 
+                            <td colspan="3"><b></b></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="top"><span class='include'>Last 
+                              updated August 2, 2002 v5.25</span> 
+                              <hr>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Awards</span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="3" align="left"><a href="http://www.zdnet.com/downloads/stories/info/0,,001109,.html" target="_blank"><img src="../../images/bstar.gif" width="81" height="81" border="0"></a><a href="http://www.wugnet.com/" target="_blank"><img src="../../images/wugnet.gif" width="114" height="41" align="absmiddle" border="0"></a></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Introduction</span> 
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="3" align="left"> 
+                              <p><b>Note: <i>Process Explorer</i> has replaced 
+                                <i>HandleEx</i>.</b></p>
+                              <p>Ever wondered which program has a particular 
+                                file or directory open? Now you can find out. 
+                                <i>Process Explorer</i> shows you information 
+                                about which handles and DLLs processes have opened 
+                                or loaded. </p>
+                              <p>The <i>Process Explorer</i> display consists 
+                                of two sub-windows. The top always shows a list 
+                                of the currently active processes, including the 
+                                names of their owning accounts, whereas the information 
+                                displayed in the bottom window depends on the 
+                                mode that <i>Process Explorer</i> is in: if it 
+                                is in handle mode you&#146;ll see the handles 
+                                that the process selected in the top window has 
+                                opened; if <i>Process Explorer</i> is in DLL mode 
+                                you&#146;ll see the DLLs and memory-mapped files 
+                                that the process has loaded. <i>Process Explorer</i> 
+                                also has a powerful search capability that will 
+                                quickly show you which processes have particular 
+                                handles opened or DLLs loaded. <font color="#000000"><br>
+                                <br>
+                                </font>The unique capabilities of <i>Process Explorer</i> 
+                                make it useful for tracking down DLL-version problems 
+                                or handle leaks, and provide insight into the 
+                                way Windows and applications work. </p>
+                              <p>What's new in Version 5.2:</p>
+                              <ul>
+                                <li>CPU usage column on Win9x</li>
+                                <li>GDI and USER handle display in process properties 
+                                  (Win2K/XP)</li>
+                                <li>Find dialog supports handle-type searching</li>
+                              </ul>
+                              <p>What's new in version 5.1:</p>
+                              <ul>
+                                <li>CPU usage column</li>
+                                <li>Session IDs on systems that have Terminal 
+                                  Services</li>
+                                <li>Process environment tab in process properties 
+                                  dialog</li>
+                                <li>Display of process tree (parent/child relationships)</li>
+                                <li>More efficient refresh</li>
+                                <li>Debug process menu item that launches registered 
+                                  Win32 debugger</li>
+                              </ul>
+                              <p>What's new in version 5.0: </p>
+                              <ul>
+                                <li>Autorefresh</li>
+                                <li>Service process highlighting</li>
+                                <li>Highlight processes running in your account</li>
+                                <li>Change process priority</li>
+                                <li>Launch Depends if its on your PATH</li>
+                                <li>Displays process group membership and privilege 
+                                  usage </li>
+                                <li>Shows process start directory</li>
+                                <li>Improved UI and performance</li>
+                              </ul>
+                              <p>Other <i>Process Explorer </i>features include: 
+                              </p>
+                              <ul>
+                                <li>Support for full handle viewing on Win9x/Me 
+                                  (with the exception of Registry key handles)</li>
+                                <li>Process icons </li>
+                                <li>Refresh highlighting: new entries in the process, 
+                                  handle and DLL views are green, and deleted 
+                                  ones red </li>
+                                <li>Listview tooltips</li>
+                                <li>DLL descriptions in the DLL view</li>
+                                <li>Highlights relocated DLLs </li>
+                                <li>Jump-to-entry in the find dialog</li>
+                                <li>Efficient refresh</li>
+                                <li>Runs on Windows 9x/Me</li>
+                                <li>Lists all process owners, even on Terminal 
+                                  Server systems</li>
+                              </ul>
+                              <p><i>Process Explorer</i> works on Windows 9x/Me, 
+                                Windows NT 4.0, Windows 2000 and Windows XP.<br>
+                                <br>
+                                <img src="../../images/screenshots/prcxshot.gif" width="563" height="383"> 
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Installation</span></td>
+                          </tr>
+                          <tr> 
+                            <td valign="TOP" colspan="3"> Simply run <i>Process 
+                              Explorer</i> (procexp.exe). On Windows NT/2K, <i>Process 
+                              Explorer</i> requires that your account have the 
+                              &quot;load driver&quot; and &quot;debug&quot; privileges. 
+                              <br>
+                              <br>
+                              <i>Process Explorer</i> will remember its window positions 
+                              and the mode that it was in each time you exit it, 
+                              and initialize with these settings when started 
+                              again. <font face="arial"></font></td>
+                          </tr>
+                          <tr> 
+                            <td height="40" colspan="3" valign="middle"><span class='sectionheader'>Processses</span></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" valign="TOP"> 
+                              <p>You can sort processes by any of the columns 
+                                in the process view, or click on the View|Show 
+                                Process Tree menu item or toolbar button to have 
+                                the process view represent the process creation 
+                                tree. The tree represents the parent-child relationships 
+                                of processes by indenting children underneath 
+                                their parent.<br>
+                              </p>
+                              <p> If you right-click on a process <em>Process 
+                                Explorer</em> will pop-up a context-menu that 
+                                will let you view additional CPU and memory-related 
+                                properties of the process, change the process' 
+                                base priority, or immediately terminate the process. 
+                                . If the <i>Dependency Walker</i> utility (www.dependencywalker.com 
+                                - depends.exe) is on your path, you'll also see 
+                                a menu item that lets you launch Depends with 
+                                the selected process as the target. Alternately, 
+                                you can use toolbar buttons or menu entries to 
+                                accomplish the same tasks. Use the tab key to 
+                                move the focus between the process and the handle 
+                                or DLL windows. </p>
+                              <p>Select the Options|Highlight Services menu item 
+                                for Process Explorer to highlight process that 
+                                host services. You can see the services that are 
+                                running in a process on the Services tab of a 
+                                process' properties dialog.</p>
+                              <p>To highlight your own processes, which might 
+                                be useful in a Terminal Services environment, 
+                                select the Options|Highlight Own Processes.</p>
+                              <table width="100%" border="0" cellspacing="2">
+                                <tr> 
+                                  <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Handle 
+                                    Mode</span></td>
+                                </tr>
+                                <tr> 
+                                  <td valign="TOP" colspan="3"> 
+                                    <p>When <i>Process Explorer</i> is in handle 
+                                      mode you'll see the names of all the named 
+                                      objects that a selected process has open. 
+                                      You can view detailed information about 
+                                      many handle types, including the state of 
+                                      synchronization objects (signaled, held) 
+                                      like semaphores, mutexes and events. </p>
+                                    <p>Select the Options|Show Unnamed Handles 
+                                      menu item or toolbar button to see all the 
+                                      process' handles, both named and un-named. 
+                                      You can toggle this mode on and off according 
+                                      to what you want to see. Right-clicking 
+                                      on a handle brings up a menu that lets you 
+                                      forcibly close a handle - you should only 
+                                      use this in extreme circumstances because 
+                                      doing so may result in an application or 
+                                      system crash. </p>
+                                    <p>Processes and threads are treated as named 
+                                      objects, so you will be shown the process 
+                                      name and, in parenthesis, the process identifier 
+                                      of processes referenced by handles. For 
+                                      thread handles you will be shown the corresponding 
+                                      thread's process name and ID, as well as 
+                                      the thread's ID. </p>
+                                  </td>
+                                </tr>
+                                <tr> 
+                                  <td colspan="3" height="40" valign="middle"><span class='sectionheader'>DLL 
+                                    Mode</span></td>
+                                </tr>
+                                <tr> 
+                                  <td valign="TOP" colspan="3"> 
+                                    <p>Select the &#147;View DLLs&#148; menu item 
+                                      or the equivalent toolbar button to switch 
+                                      to DLL mode. In this mode loaded DLLs are 
+                                      listed in the bottom window . If you double-click 
+                                      on a DLL, or press the properties toolbar 
+                                      button, <i>Process Explorer</i> will present a properties 
+                                      dialog with detailed version information. 
+                                      <br>
+                                      <br>
+                                      If you're running on Windows NT/2K, the 
+                                      &quot;MM&quot; column indicates whether 
+                                      the corresponding file has been memory-mapped 
+                                      rather than loaded as a module. This corresponds 
+                                      to an applications use of MapViewOfFile. 
+                                      If a file is memory-mapped the base and 
+                                      size columns indicate the virtual address 
+                                      range where the file has been mapped. If 
+                                      you are unable to delete a file and don&#146;t 
+                                      find any handle references to it, the file 
+                                      may have been memory mapped, since WinNT/2K 
+                                      does not let memory mapped files be deleted 
+                                      or portions of a file that have been mapped 
+                                      be truncated.</p>
+                                    <p>Select the Options|Highlight Relocated 
+                                      DLLs to have Process Explorer highlight any DLLs 
+                                      that were not loaded at their default base 
+                                      address in yellow. This feature is intended 
+                                      to help developers define base addresses 
+                                      for their DLLs that result in no conflicts 
+                                      and therefore provide optimal load times 
+                                      and minimal memory footprints.</p>
+                                  </td>
+                                </tr>
+                                <tr> 
+                                  <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Refresh</span></td>
+                                </tr>
+                                <tr> 
+                                  <td valign="TOP" colspan="3"> You can configure 
+                                    Process Explorer to automatically refresh 
+                                    at various intervals, or to pause the auto-refresh 
+                                    and manually refresh the display. The F5 key 
+                                    or the &quot;Refresh&quot; menu item will 
+                                    cause <i>Process Explorer</i> to rescan process, 
+                                    DLL and handle information. When you perform 
+                                    a refresh <i>Process Explorer</i> highlights 
+                                    entries that existed before the refresh but 
+                                    not after in red. Process Explorer shows entries 
+                                    that are new after the refresh in green. For 
+                                    example, if you start a new process, that 
+                                    process will display in green. This feature 
+                                    makes it easier to see what&#146;s changed 
+                                    across a refresh, and to find handle leaks.</td>
+                                </tr>
+                                <tr> 
+                                  <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Searching</span></td>
+                                </tr>
+                                <tr> 
+                                  <td valign="TOP" colspan="3"> You can search 
+                                    for processes that have particular DLLs loaded 
+                                    or handles opened. The search dialog is activated 
+                                    with the search toolbar button or its menu 
+                                    item. Enter a substring in the edit box of 
+                                    the search dialog and select the &quot;Search&quot; 
+                                    button. If <i>Process Explorer</i> is in handle mode 
+                                    it will search for opened handles that contain 
+                                    the substring, but if it is in DLL mode it 
+                                    will search for loaded DLLs that have the 
+                                    substring in their path name. In either case, 
+                                    all handles or DLLs are scanned, not just 
+                                    those of the currently selected process.<br>
+                                    <br>
+                                    Selecting an entry in the result-pane of the 
+                                    find dialog causes <i>Process Explorer</i> to locate 
+                                    and display in the process and handle or DLL 
+                                    view (as appropriate), the lines corresponding 
+                                    to the entry you select. </td>
+                                </tr>
+                                <tr> 
+                                  <td colspan="3" height="40" valign="middle"><span class='sectionheader'>Related 
+                                    Tools</span></td>
+                                </tr>
+                                <tr> 
+                                  <td valign="TOP" colspan="3"> Here are some 
+                                    other handle and DLL viewing tools available 
+                                    at Sysinternals: 
+                                    <ul>
+                                      <li><a
+href="handle.shtml">Handle</a> - a command-line handle viewer for Win9x/Me and 
+                                        NT/Win2K</li>
+                                      <li><a
+href="../../ntw2k/freeware/listdlls.shtml">ListDLLs</a> - a command-line DLL viewer 
+                                        for Win9x/Me and NT/Win2K</li>
+                                      <li><a href="pslist.shtml">PsList</a> - 
+                                        loca/remote command-line process lister 
+                                        for NT/Win2K</li>
+                                      <li><a href="pskill.shtml">PsKill</a> - 
+                                        local/remote command-line process killer 
+                                        for NT/Win2K</li>
+                                    </ul>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3" height="40" valign="middle" align="center"> 
+                              <p><strong>In order to help us track its use, please 
+                                download through the link that represents the 
+                                operating system on which you will use or mostly 
+                                use </strong><em><strong>Process Explorer. </strong></em><strong><br>
+                                <br>
+                                Note that the zip files are identical, and </strong><em><strong>Process Explorer</strong></em><strong> 
+                                runs on all Windows platforms.</strong></p>
+                              <p><a href="../../files/procexp9x.zip"><b>Download 
+                                Process Explorer (x86 - 77KB) - you plan on using 
+                                Process Explorer on Win9x/Me</b></a></p>
+                              <p><a href="../../files/procexpnt.zip"><b>Download 
+                                Process Explorer (x86 - 77KB) - you plan on using 
+                                Process Explorer on WinNT/2K/XP</b></a></p>
+                              <p><a href="../../files/handaxp.zip"><b>Download 
+                                HandleExfor Compaq Alpha (69 KB)</b></a></p>
+                              <a href="#top"><b>Back to Top</b></a> </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </TD>
+              </TR>
+            </TABLE>
+            <!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

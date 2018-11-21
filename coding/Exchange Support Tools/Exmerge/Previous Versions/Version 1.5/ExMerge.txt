@@ -1,0 +1,156 @@
+***************************************************************
+Microsoft Exchange Mailbox Merge Program, v1.5
+Developed by: Kali Buhariwalla, Microsoft Technical Support
+***************************************************************
+
+The Microsoft Exchange Mailbox Merge Program is a program that will 
+allow a Microsoft Exchange Administrator to extract data from mailboxes
+on a Microsoft Exchange Server and then merge this data into the same 
+mailboxes on another Microsoft Exchange Server.
+
+The program copies data from the source server into Personal Folders 
+(.PST files) and then merges the data, in the Personal Folders, into 
+the mailboxes on the destination server.
+
+The program has two modes of operation: One Step and Two Step.
+In the One Step mode, the program will copy data from the source mailbox
+to a .PST file and then merge the data in the .PST file into the same
+mailbox on the destination server. In this case, the mailbox on the 
+destination server must have the same mailbox name as well the same
+container path. The Distinguished Name(DN) of the mailbox on the destination
+server is obtained by replacing the Organization and Site names in the
+the DN of the mailbox on the source server with the Organization and
+Sites names of the destination server.
+
+In the Two Step mode, the user has the option of only copying data to 
+.PST files or merging data from .PST files into a server.
+
+In order for this program to successfully work, the user must be logged
+into Windows NT with the Microsoft Exchange Service Account. If this is
+not possible, then the current Windows NT account must have permissions
+on all mailboxes selected to be merged.
+
+LOGGING
+=======
+The program creates a log file called C:\EXMERGE.LOG containing any
+errors encountered during operation.
+
+Version 1.5 and higher of the program support the following command line
+options which control the amount of information logged:
+-logmin, -logmed, -logmax
+
+
+RUNNING THE PROGRAM
+==========================
+This program will only run Windows NT 4.0 or later.
+
+Before running this program, make sure that the Microsoft Exchange Client
+and the Microsoft Exchange Administrator program is installed on the
+machine that ExMerge.exe is being run on.
+
+To run the program, double on the ExMerge.exe program from the 
+Windows NT explorer.
+
+LIMITATIONS
+===========
+This version of the program will only merge user folders and messages. 
+It does not support Inbox Rules, forms and Schedule+ data. This program
+will merge Outlook Calendars and Contacts.
+
+Messages copied will lose their single instance storage and this may 
+result in the size of the Microsoft Exchange Private Information Storage 
+increasing significantly.
+
+USING EXMERGE WHEN THE INFORMATION STORE WON'T START
+=========================================================
+Assume the production server is called SERVERP and another test
+server is called SERVERT
+
+1) Create a new (blank) Information Store on SERVERP, by moving
+   out all the files in the EXCHSRVR\MDBDATA directory. This will 
+   allow the Information Store service to start.
+2) Restore/Recover the old information store onto SERVERT.
+3) Stop the Information Store service on SERVERP.
+4) Stop the Information Store service on SERVERT.
+5) On SERVERT, rename the EXCHSRVR\MDBDATA directory to MDBDATA.OLD
+6) On SERVERT create a new directory called EXCHSRVR\MDBDATA.
+7) On SERVERP, rename the EXCHSRVR\MDBDATA directory to MDBDATA.NEW
+8) On SERVERP create a new directory called EXCHSRVR\MDBDATA.
+9) On SERVERP, from the EXCHSRVR\MDBDATA.NEW directory copy the PRIV.EDB
+   and the PUB.EDB files to the EXCHSRVR\MDBDATA directory on SERVERT.
+10) On SERVERT, from the EXCHSRVR\MDBDATA.OLD directory copy the PRIV.EDB
+   and the PUB.EDB files to the EXCHSRVR\MDBDATA directory on SERVERP.
+   Hence we have swapped the PRIV.EDB and PUB.EDB files on the two servers.
+11) On SERVERP, run ISINTEG -patch
+12) On SERVERT, run ISINTEG -patch.
+13) Run the ExMerge program to now merge all data from SERVERT into SERVERP.
+ 
+
+KNOWN ISSUES
+==============
+Problems getting mailboxes on a server.
+--------------------------------------------------------
+1) Check server name
+2) Check organization and site names.
+3) Verify that the DS and IS are running on the server. The program gets 
+   the list of mailboxes from the IS, since it also gets the mailbox size.
+4) Sometimes the list displayed may not contain all the mailboxes on the Exchange 
+   server. Mailboxes that have never been logged into, have no Information
+   store object and hence these mailboxes are not detected. This behaviour
+   is also noticed in the Microsoft Exchange Administrator program when 
+   viewing the Mailbox Resources of the Private Information Store. The
+   workaround to this problem is to log into the Microsoft Exchange client
+   and send an e-mail message to all mailboxes on that server. This will
+   create mailbox objects in the IS for all mailboxes.
+
+Error configuring message service (MSEMS)
+--------------------------------------------------------------
+This error may be reported in the ExMerge.log.
+This error could be generated if there is no Directory object for mailbox object that exists in the Information Store. Check the Mailbox Resources page of the Private Information Store, in the Admin program and then verify that Directory Objects exists for the mailboxes listed in the Mailbox Resources.
+Directory objects can be created manually, or by using the DS/IS adjustment. 
+Please make sure you understand the implications of running the DS/IS adjustment BEFORE running it.
+
+Error opening message store (MSEMS). Verify you have the correct permissions to log on
+------------------------------------------------------------------------------------------------------------------------------
+Make sure that you are logged into Windows NT with an account that has rights to the mailboxes you are
+trying to access using ExMerge.exe
+It may be easiest to log into Windows NT, using the Microsoft Exchange Service Account.
+
+Error creating Message Service (MSPST MS)
+----------------------------------------------------------------
+Make sure that Microsoft Exchange client is installed on the machine on which
+ExMerge.exe is being run.
+
+Error configuring message service (MSPST MS)
+---------------------------------------------------------------------
+The ALIAS NAME  of the mailbox is more than 8 characters in length
+and exmerge.exe is unable to create the longfilename on the drive specified.
+This has been seen to occur in on Netware Drives which do not support longfilenames.
+
+VERSION INFORMATION
+=====================
+
+Version 1.3
+----------------
+Fixed a problem noticed when aliases longer than 18 characters in length
+are encountered.
+The following error is logged.
+"Error creating MAPI profile"
+
+Version 1.4
+----------------
+Added functionality to copy messages individually, if we 
+encounter the MAPI_W_PARTIAL_COMPLETION error.
+
+Added extra logging, when errors are encountered during the 
+message copy process.
+
+Version 1.5
+----------------
+Added additional logging capabilities.
+Added support for the following logging command line options to 
+control logging output.
+-logmin
+-logmed
+-logmax
+Added symbolic information in the release executable.

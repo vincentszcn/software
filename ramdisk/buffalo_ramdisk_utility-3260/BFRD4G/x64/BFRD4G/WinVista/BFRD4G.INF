@@ -1,0 +1,101 @@
+; BFRD4G.INF 
+; Windows XP/VISTA/7 64bit installation file for installing the Ramdisk driver
+; Copyright(C) 2009 BUFFALO INC. All rights Reserved
+
+[Version]
+Signature="$WINDOWS NT$"
+;Class=DiskDrive
+Class=BFRD4G
+;ClassGuid={4d36e967-e325-11ce-bfc1-08002be10318}
+ClassGuid={0C67FC88-59DB-4042-ABED-A90AF7B22435}
+Provider=%BUFFALO%
+DriverVer=03/09/2010,3.1.0.0
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[ClassInstall]
+Addreg=BFRD4GClassReg
+
+[ClassInstall32]
+Addreg=BFRD4GClassReg
+
+[BFRD4GClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+
+[DiskCopyfiles]
+BFRD4G.sys
+
+[SourceDisksNames]
+1=%InstDisk%,
+
+[SourceDisksFiles]
+BFRD4G.sys=1
+
+[Manufacturer]
+%BUFFALO% = DiskDevice,NTamd64
+
+[DiskDevice.NTamd64]
+%DiskDevDesc% = DiskInstall, SW\{5A65B7D2-CEA4-4316-B055-73892703A877}
+
+[DiskInstall.NTamd64]
+CopyFiles = DiskCopyfiles
+
+[DiskInstall.NTamd64.Services]
+AddService = BFRD4G, %SPSVCINST_ASSOCSERVICE%, DiskServiceInst
+
+[DiskServiceInst]
+ServiceType   = %SERVICE_KERNEL_DRIVER%
+StartType     = %SERVICE_BOOT_START%
+ErrorControl  = %SERVICE_ERROR_NORMAL%
+DisplayName   = %DiskServiceDesc%
+ServiceBinary = %12%\BFRD4G.sys
+AddReg        = DiskAddReg
+
+[DiskAddReg]
+HKR, "Parameters", "BreakOnEntry",      %REG_DWORD%, 0x00000000
+HKR, "Parameters", "DebugLevel",        %REG_DWORD%, 0x00000000
+HKR, "Parameters", "DebugComp",         %REG_DWORD%, 0xFFFFFFFF
+HKR, "Parameters", "StartAddrHigh",     %REG_DWORD%, 0x00000000
+HKR, "Parameters", "StartAddrLow",      %REG_DWORD%, 0x00000000
+HKR, "Parameters", "DiskSizeHigh",      %REG_DWORD%, 0x00000000
+HKR, "Parameters", "DiskSizeLow",       %REG_DWORD%, 0x00000000
+HKR, "Parameters", "DiskSize",          %REG_DWORD%, 0x00000000
+HKR, "Parameters", "MemorySizePrevHigh",%REG_DWORD%, 0x00000000
+HKR, "Parameters", "MemorySizePrevLow", %REG_DWORD%, 0x00000000
+HKR, "Parameters", "MemorySizePrev",    %REG_DWORD%, 0x00000000
+HKR, "Parameters", "DriveLetter",       %REG_SZ%,    "@:"
+HKR, "Parameters", "RootDirEntries",    %REG_DWORD%, 0x00000200
+HKR, "Parameters", "SectorsPerCluster", %REG_DWORD%, 0x00000000
+HKR, "Parameters", "MediaType",         %REG_DWORD%, 0x00000001
+HKR, "Parameters", "MediaId",           %REG_DWORD%, 0x000000f8
+HKR, "Parameters", "DeviceMode",        %REG_DWORD%, 0x00000001
+HKR, "Parameters", "MemoryMode",        %REG_DWORD%, 0x00000000
+HKR, "Parameters", "BackupMode",        %REG_DWORD%, 0x00000000
+HKR, "Parameters", "ImageFileDrive",    %REG_SZ%,    "C:"
+HKR, "Parameters", "DeviceStatus",      %REG_DWORD%, 0x00000000
+HKR, "Parameters", "EquipMemorySize",   %REG_DWORD%, 0x00000000
+HKR, "Parameters", "MemorySizeHigh",    %REG_DWORD%, 0x00000000
+HKR, "Parameters", "MemorySizeLow",     %REG_DWORD%, 0x00000000
+HKR, "Parameters", "MemoryLimit",       %REG_DWORD%, 0x00000000
+HKR, "Parameters", "MinimumMaxMem",     %REG_DWORD%, 0x39000000
+HKR, "Parameters", "BackupValid",       %REG_DWORD%, 0x00000000
+HKR, "Parameters", "EnableOver4GB",     %REG_DWORD%, 0x00000000
+HKR, "Parameters", "Initialized",       %REG_DWORD%, 0x00000000
+HKR, "Parameters", "Capability",        %REG_DWORD%, 0x00000000
+
+[Strings]
+BUFFALO         = "BUFFALO"
+ClassName       = "BFRD4G RAM Disk Driver"
+DiskDevDesc     = "BUFFALO RAM Disk Driver"
+DiskServiceDesc = "BUFFALO RAM Disk Driver"
+InstDisk        = "BUFFALO RAM Disk Driver Install Disk"
+;*******************************************
+;Handy macro substitutions (non-localizable)
+SPSVCINST_ASSOCSERVICE = 0x00000002
+SERVICE_KERNEL_DRIVER  = 1
+SERVICE_BOOT_START     = 0
+SERVICE_ERROR_NORMAL   = 1
+REG_DWORD              = 0x00010001
+REG_SZ                 = 0x00000000

@@ -1,0 +1,1 @@
+mklink /D C:\Users\somebody\AppData\Roaming\360Safe  "D:\record\system\360Safe"

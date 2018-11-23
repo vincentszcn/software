@@ -14,7 +14,56 @@
       "alpha":"0.8",
       "gradient-fill":"true",
       "no-labe-ls":"true",
-      "values":[]
+      "values":[
+        {
+          "top":49.6762,
+          "on-click":"ChartClicked",
+          "tip":"Microsoft Visual Studio<br>#val#%",
+          "label":"Microsoft Visual Studio",
+          "colour":"#009933"
+        },
+        {
+          "top":19.1777,
+          "on-click":"ChartClicked",
+          "tip":"Windows Kits<br>#val#%",
+          "label":"Windows Kits",
+          "colour":"#FF6600"
+        },
+        {
+          "top":9.6595,
+          "on-click":"ChartClicked",
+          "tip":"Microsoft SDKs<br>#val#%",
+          "label":"Microsoft SDKs",
+          "colour":"#0099FF"
+        },
+        {
+          "top":7.5608,
+          "on-click":"ChartClicked",
+          "tip":"Microsoft Visual Studio 14.0<br>#val#%",
+          "label":"Microsoft Visual Studio 14.0",
+          "colour":"#990000"
+        },
+        {
+          "top":5.3562,
+          "on-click":"ChartClicked",
+          "tip":"Reference Assemblies<br>#val#%",
+          "label":"Reference Assemblies",
+          "colour":"#660099"
+        },
+        {
+          "top":1.7018,
+          "on-click":"ChartClicked",
+          "tip":"MSBuild<br>#val#%",
+          "label":"MSBuild",
+          "colour":"#228888"
+        },
+        {
+          "colour":"#882288",
+          "top":6.87,
+          "label":"Others",
+          "tip":"Others<br>#val#%"
+        }
+      ]
     }
   ],
   "y_axis":{
@@ -24,14 +73,22 @@
     "grid_colour":"#909090",
     "offset":10,
     "steps":10,
-    "max":5
+    "max":55
   },
   "x_axis":{
     "3d":5,
     "colour":"#909090",
     "grid_colour":"#909090",
     "labels":{
-      "labels":[],
+      "labels":[
+        "[ Microsoft Visual Studio ]",
+        "[ Windows Kits ]",
+        "[ Microsoft SDKs ]",
+        "[ Microsoft Visual Studio 14.0 ]",
+        "[ Reference Assemblies ]",
+        "[ MSBuild ]",
+        "Others"
+      ],
       "rotate":355
     }
   }
